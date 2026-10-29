@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- Navigation and layout -->
+  <data name="Nav_Home" xml:space="preserve">
+    <value>Գլխավոր</value>
+  </data>
+  <data name="Nav_TripBudgetCalculator" xml:space="preserve">
+    <value>Ճամփորդության բյուջեի հաշվիչ</value>
+  </data>
+  <data name="Language_Label" xml:space="preserve">
+    <value>Լեզու</value>
+  </data>
+
+  <!-- Not found page -->
+  <data name="NotFound_Heading" xml:space="preserve">
+    <value>Էջը չի գտնվել</value>
+  </data>
+  <data name="NotFound_Text" xml:space="preserve">
+    <value>Ցավոք, ձեր փնտրած էջը գոյություն չունի։</value>
+  </data>
+  <data name="NotFound_HomeLink" xml:space="preserve">
+    <value>Անցնել գլխավոր էջ</value>
+  </data>
+
+  <!-- Home page -->
+  <data name="Home_Title" xml:space="preserve">
+    <value>Draveling – Ճամփորդության պլանավորման պարզ գործիքներ</value>
+  </data>
+  <data name="Home_MetaDescription" xml:space="preserve">
+    <value>Draveling-ն առաջարկում է պարզ և անվճար գործիքներ ձեր ճամփորդությունը պլանավորելու համար՝ սկսած ճամփորդության բյուջեի հաշվիչից։</value>
+  </data>
+  <data name="Home_Heading" xml:space="preserve">
+    <value>Պլանավորեք ձեր ճամփորդությունը Draveling-ի հետ</value>
+  </data>
+  <data name="Home_Lead" xml:space="preserve">
+    <value>Պարզ և անվճար գործիքներ ձեր հաջորդ արձակուրդը պլանավորելու համար։</value>
+  </data>
+  <data name="Home_CalculatorLink" xml:space="preserve">
+    <value>Փորձել ճամփորդության բյուջեի հաշվիչը</value>
+  </data>
+
+  <!-- Trip Budget Calculator: page and form -->
+  <data name="Calc_Title" xml:space="preserve">
+    <value>Ճամփորդության բյուջեի հաշվիչ – Հաշվեք ձեր արձակուրդի արժեքը | Draveling</value>
+  </data>
+  <data name="Calc_MetaDescription" xml:space="preserve">
+    <value>Անվճար ճամփորդության բյուջեի հաշվիչ։ Նշեք ճամփորդների թիվը, օրերը, կացարանի, սննդի, տրանսպորտի, զբոսանքների և ավիատոմսերի ծախսերը՝ հաշվելու արձակուրդի ընդհանուր արժեքը և արժեքը մեկ անձի համար։</value>
+  </data>
+  <data name="Calc_Heading" xml:space="preserve">
+    <value>Ճամփորդության բյուջեի հաշվիչ</value>
+  </data>
+  <data name="Calc_Lead" xml:space="preserve">
+    <value>Հաշվեք, թե որքան գումար է անհրաժեշտ ձեր արձակուրդի համար։ Մուտքագրեք ձեր գնահատած ծախսերը ԱՄՆ դոլարով, և արդյունքները կթարմացվեն մուտքագրելուն պես։</value>
+  </data>
+  <data name="Calc_SectionBasics" xml:space="preserve">
+    <value>Ճամփորդության հիմնական տվյալներ</value>
+  </data>
+  <data name="Calc_Travelers" xml:space="preserve">
+    <value>Ճամփորդների թիվը</value>
+  </data>
+  <data name="Calc_Days" xml:space="preserve">
+    <value>Ճամփորդության օրերի թիվը</value>
+  </data>
+  <data name="Calc_SectionDaily" xml:space="preserve">
+    <value>Օրական ծախսեր</value>
+  </data>
+  <data name="Calc_Accommodation" xml:space="preserve">
+    <value>Կացարան՝ մեկ գիշերվա համար</value>
+  </data>
+  <data name="Calc_AccommodationHint" xml:space="preserve">
+    <value>Ընդհանուր ամբողջ խմբի համար։ Գիշերների թիվը համարվում է հավասար ճամփորդության օրերի թվին։</value>
+  </data>
+  <data name="Calc_Food" xml:space="preserve">
+    <value>Սնունդ՝ մեկ անձի համար օրական</value>
+  </data>
+  <data name="Calc_Transportation" xml:space="preserve">
+    <value>Տրանսպորտ՝ օրական</value>
+  </data>
+  <data name="Calc_TransportationHint" xml:space="preserve">
+    <value>Տեղական տրանսպորտ ամբողջ խմբի համար։</value>
+  </data>
+  <data name="Calc_Activities" xml:space="preserve">
+    <value>Զբոսանքներ և միջոցառումներ՝ մեկ անձի համար օրական</value>
+  </data>
+  <data name="Calc_ActivitiesHint" xml:space="preserve">
+    <value>Տեսարժան վայրեր, էքսկուրսիաներ և մուտքի տոմսեր։</value>
+  </data>
+  <data name="Calc_SectionOneTime" xml:space="preserve">
+    <value>Միանվագ ծախսեր</value>
+  </data>
+  <data name="Calc_Flights" xml:space="preserve">
+    <value>Ավիատոմս երկու ուղղությամբ՝ մեկ անձի համար</value>
+  </data>
+  <data name="Calc_Other" xml:space="preserve">
+    <value>Այլ ծախսեր ամբողջ ճամփորդության համար</value>
+  </data>
+  <data name="Calc_OtherHint" xml:space="preserve">
+    <value>Ապահովագրություն, վիզաներ, հուշանվերներ, SIM քարտեր և այլն։</value>
+  </data>
+  <data name="Calc_Reset" xml:space="preserve">
+    <value>Վերականգնել սկզբնական արժեքները</value>
+  </data>
+
+  <!-- Trip Budget Calculator: results -->
+  <data name="Results_Heading" xml:space="preserve">
+    <value>Ձեր հաշվարկը</value>
+  </data>
+  <data name="Results_TotalLabel" xml:space="preserve">
+    <value>Ճամփորդության ընդհանուր նախահաշիվ</value>
+  </data>
+  <data name="Results_PerTraveler" xml:space="preserve">
+    <value>Մեկ ճամփորդի համար</value>
+  </data>
+  <data name="Results_Travelers" xml:space="preserve">
+    <value>Ճամփորդներ</value>
+  </data>
+  <data name="Results_Days" xml:space="preserve">
+    <value>Օրեր</value>
+  </data>
+  <data name="Results_Nights" xml:space="preserve">
+    <value>Գիշերներ</value>
+  </data>
+  <data name="Results_BreakdownCaption" xml:space="preserve">
+    <value>Ծախսերի մանրամասն բաշխում</value>
+  </data>
+  <data name="Results_Accommodation" xml:space="preserve">
+    <value>Կացարան</value>
+  </data>
+  <data name="Results_Food" xml:space="preserve">
+    <value>Սնունդ</value>
+  </data>
+  <data name="Results_Transportation" xml:space="preserve">
+    <value>Տրանսպորտ</value>
+  </data>
+  <data name="Results_Activities" xml:space="preserve">
+    <value>Զբոսանքներ և տեսարժան վայրեր</value>
+  </data>
+  <data name="Results_Flights" xml:space="preserve">
+    <value>Ավիատոմսեր</value>
+  </data>
+  <data name="Results_Other" xml:space="preserve">
+    <value>Այլ ծախսեր</value>
+  </data>
+  <data name="Results_Total" xml:space="preserve">
+    <value>Ընդամենը</value>
+  </data>
+  <data name="Results_Invalid" xml:space="preserve">
+    <value>Ուղղեք նշված դաշտերը՝ հաշվարկը տեսնելու համար։</value>
+  </data>
+  <data name="Results_Note" xml:space="preserve">
+    <value>Բոլոր գումարները ԱՄՆ դոլարով են և հիմնված են ձեր գնահատականների վրա։ Կացարանը հաշվարկվում է այնքան գիշերվա համար, որքան ճամփորդության օրերն են։</value>
+  </data>
+
+  <!-- Trip Budget Calculator: validation -->
+  <data name="Validation_TravelersRequired" xml:space="preserve">
+    <value>Նշեք ճամփորդների թիվը։</value>
+  </data>
+  <data name="Validation_TravelersRange" xml:space="preserve">
+    <value>Ճամփորդների թիվը պետք է լինի 1-ից 100։</value>
+  </data>
+  <data name="Validation_DaysRequired" xml:space="preserve">
+    <value>Նշեք ճամփորդության օրերի թիվը։</value>
+  </data>
+  <data name="Validation_DaysRange" xml:space="preserve">
+    <value>Օրերի թիվը պետք է լինի 1-ից 365։</value>
+  </data>
+  <data name="Validation_AccommodationNegative" xml:space="preserve">
+    <value>Կացարանի արժեքը չի կարող բացասական լինել։</value>
+  </data>
+  <data name="Validation_FoodNegative" xml:space="preserve">
+    <value>Սննդի արժեքը չի կարող բացասական լինել։</value>
+  </data>
+  <data name="Validation_TransportationNegative" xml:space="preserve">
+    <value>Տրանսպորտի արժեքը չի կարող բացասական լինել։</value>
+  </data>
+  <data name="Validation_ActivitiesNegative" xml:space="preserve">
+    <value>Զբոսանքների արժեքը չի կարող բացասական լինել։</value>
+  </data>
+  <data name="Validation_FlightNegative" xml:space="preserve">
+    <value>Ավիատոմսի արժեքը չի կարող բացասական լինել։</value>
+  </data>
+  <data name="Validation_OtherNegative" xml:space="preserve">
+    <value>Այլ ծախսերը չեն կարող բացասական լինել։</value>
+  </data>
+</root>

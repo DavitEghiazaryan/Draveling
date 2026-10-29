@@ -1,0 +1,70 @@
+@inject AppLanguage Lang
+@inject NavigationManager Navigation
+@inject IJSRuntime JS
+@inject IStringLocalizer<AppStrings> L
+
+<div class="language-switcher" @onkeydown="OnKeyDown">
+    <button type="button" class="language-toggle" aria-haspopup="menu" aria-expanded="@_isOpen"
+            aria-label="@L["Language_Label"]" title="@L["Language_Label"]" @onclick="Toggle">
+        <Flag Code="@Lang.Code" />
+        <span class="language-name">@CurrentLanguage.NativeName</span>
+        <span class="chevron" aria-hidden="true"></span>
+    </button>
+
+    @if (_isOpen)
+    {
+        <div class="language-backdrop" @onclick="Close"></div>
+        <div class="language-menu" role="menu">
+            @foreach (var language in Languages.All)
+            {
+                <a role="menuitem" href="@Lang.HrefFor(language.Code)" lang="@language.Code" hreflang="@language.Code"
+                   class="@(language.Code == Lang.Code ? "selected" : null)"
+                   @onclick="() => SwitchTo(language.Code)" @onclick:preventDefault>
+                    <Flag Code="@language.Code" />
+                    <span>@language.NativeName</span>
+                </a>
+            }
+        </div>
+    }
+</div>
+
+@code {
+    private const string PreferenceKey = "draveling.lang";
+    private bool _isOpen;
+
+    private Language CurrentLanguage => Languages.All.First(l => l.Code == Lang.Code);
+
+    private void Toggle() => _isOpen = !_isOpen;
+
+    private void Close() => _isOpen = false;
+
+    private void OnKeyDown(KeyboardEventArgs e)
+    {
+        if (e.Key == "Escape")
+        {
+            Close();
+        }
+    }
+
+    private async Task SwitchTo(string language)
+    {
+        Close();
+
+        if (language == Lang.Code)
+        {
+            return;
+        }
+
+        try
+        {
+            await JS.InvokeVoidAsync("localStorage.setItem", PreferenceKey, language);
+        }
+        catch (JSException)
+        {
+            // Storage can be blocked (private mode, disabled cookies). Switching still works for this visit.
+        }
+
+        // The UI culture is fixed when the app starts, so a full reload is required to change language.
+        Navigation.NavigateTo(Lang.HrefFor(language), forceLoad: true);
+    }
+}

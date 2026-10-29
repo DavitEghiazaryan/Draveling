@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- Navigation and layout -->
+  <data name="Nav_Home" xml:space="preserve">
+    <value>Главная</value>
+  </data>
+  <data name="Nav_TripBudgetCalculator" xml:space="preserve">
+    <value>Калькулятор бюджета поездки</value>
+  </data>
+  <data name="Language_Label" xml:space="preserve">
+    <value>Язык</value>
+  </data>
+
+  <!-- Not found page -->
+  <data name="NotFound_Heading" xml:space="preserve">
+    <value>Страница не найдена</value>
+  </data>
+  <data name="NotFound_Text" xml:space="preserve">
+    <value>К сожалению, запрашиваемая страница не существует.</value>
+  </data>
+  <data name="NotFound_HomeLink" xml:space="preserve">
+    <value>Перейти на главную</value>
+  </data>
+
+  <!-- Home page -->
+  <data name="Home_Title" xml:space="preserve">
+    <value>Draveling – Простые инструменты для планирования путешествий</value>
+  </data>
+  <data name="Home_MetaDescription" xml:space="preserve">
+    <value>Draveling предлагает простые и бесплатные инструменты для планирования поездки, начиная с калькулятора бюджета поездки.</value>
+  </data>
+  <data name="Home_Heading" xml:space="preserve">
+    <value>Планируйте поездку с Draveling</value>
+  </data>
+  <data name="Home_Lead" xml:space="preserve">
+    <value>Простые и бесплатные инструменты для планирования вашего следующего отпуска.</value>
+  </data>
+  <data name="Home_CalculatorLink" xml:space="preserve">
+    <value>Попробовать калькулятор бюджета поездки</value>
+  </data>
+
+  <!-- Trip Budget Calculator: page and form -->
+  <data name="Calc_Title" xml:space="preserve">
+    <value>Калькулятор бюджета поездки – Рассчитайте стоимость отпуска | Draveling</value>
+  </data>
+  <data name="Calc_MetaDescription" xml:space="preserve">
+    <value>Бесплатный калькулятор бюджета поездки. Укажите число путешественников, дни, расходы на жильё, питание, транспорт, развлечения и перелёты, чтобы рассчитать общую стоимость отпуска и стоимость на человека.</value>
+  </data>
+  <data name="Calc_Heading" xml:space="preserve">
+    <value>Калькулятор бюджета поездки</value>
+  </data>
+  <data name="Calc_Lead" xml:space="preserve">
+    <value>Рассчитайте, сколько денег понадобится на отпуск. Введите свои оценки расходов в долларах США, и итоги будут обновляться по мере ввода.</value>
+  </data>
+  <data name="Calc_SectionBasics" xml:space="preserve">
+    <value>Основные данные поездки</value>
+  </data>
+  <data name="Calc_Travelers" xml:space="preserve">
+    <value>Число путешественников</value>
+  </data>
+  <data name="Calc_Days" xml:space="preserve">
+    <value>Число дней поездки</value>
+  </data>
+  <data name="Calc_SectionDaily" xml:space="preserve">
+    <value>Ежедневные расходы</value>
+  </data>
+  <data name="Calc_Accommodation" xml:space="preserve">
+    <value>Жильё за ночь</value>
+  </data>
+  <data name="Calc_AccommodationHint" xml:space="preserve">
+    <value>Общая сумма для всей группы. Число ночей считается равным числу дней поездки.</value>
+  </data>
+  <data name="Calc_Food" xml:space="preserve">
+    <value>Питание на человека в день</value>
+  </data>
+  <data name="Calc_Transportation" xml:space="preserve">
+    <value>Транспорт в день</value>
+  </data>
+  <data name="Calc_TransportationHint" xml:space="preserve">
+    <value>Местный транспорт для всей группы.</value>
+  </data>
+  <data name="Calc_Activities" xml:space="preserve">
+    <value>Развлечения на человека в день</value>
+  </data>
+  <data name="Calc_ActivitiesHint" xml:space="preserve">
+    <value>Осмотр достопримечательностей, экскурсии и входные билеты.</value>
+  </data>
+  <data name="Calc_SectionOneTime" xml:space="preserve">
+    <value>Разовые расходы</value>
+  </data>
+  <data name="Calc_Flights" xml:space="preserve">
+    <value>Авиабилет туда и обратно на человека</value>
+  </data>
+  <data name="Calc_Other" xml:space="preserve">
+    <value>Прочие расходы на поездку</value>
+  </data>
+  <data name="Calc_OtherHint" xml:space="preserve">
+    <value>Страховка, визы, сувениры, SIM-карты и всё остальное.</value>
+  </data>
+  <data name="Calc_Reset" xml:space="preserve">
+    <value>Сбросить к значениям по умолчанию</value>
+  </data>
+
+  <!-- Trip Budget Calculator: results -->
+  <data name="Results_Heading" xml:space="preserve">
+    <value>Ваш расчёт</value>
+  </data>
+  <data name="Results_TotalLabel" xml:space="preserve">
+    <value>Общая ориентировочная стоимость поездки</value>
+  </data>
+  <data name="Results_PerTraveler" xml:space="preserve">
+    <value>На одного путешественника</value>
+  </data>
+  <data name="Results_Travelers" xml:space="preserve">
+    <value>Путешественники</value>
+  </data>
+  <data name="Results_Days" xml:space="preserve">
+    <value>Дни</value>
+  </data>
+  <data name="Results_Nights" xml:space="preserve">
+    <value>Ночи</value>
+  </data>
+  <data name="Results_BreakdownCaption" xml:space="preserve">
+    <value>Подробная разбивка расходов</value>
+  </data>
+  <data name="Results_Accommodation" xml:space="preserve">
+    <value>Жильё</value>
+  </data>
+  <data name="Results_Food" xml:space="preserve">
+    <value>Питание</value>
+  </data>
+  <data name="Results_Transportation" xml:space="preserve">
+    <value>Транспорт</value>
+  </data>
+  <data name="Results_Activities" xml:space="preserve">
+    <value>Развлечения и экскурсии</value>
+  </data>
+  <data name="Results_Flights" xml:space="preserve">
+    <value>Перелёты</value>
+  </data>
+  <data name="Results_Other" xml:space="preserve">
+    <value>Прочие расходы</value>
+  </data>
+  <data name="Results_Total" xml:space="preserve">
+    <value>Итого</value>
+  </data>
+  <data name="Results_Invalid" xml:space="preserve">
+    <value>Исправьте выделенные поля, чтобы увидеть расчёт.</value>
+  </data>
+  <data name="Results_Note" xml:space="preserve">
+    <value>Все суммы указаны в долларах США и основаны на ваших оценках. Жильё рассчитывается на столько ночей, сколько дней длится поездка.</value>
+  </data>
+
+  <!-- Trip Budget Calculator: validation -->
+  <data name="Validation_TravelersRequired" xml:space="preserve">
+    <value>Укажите число путешественников.</value>
+  </data>
+  <data name="Validation_TravelersRange" xml:space="preserve">
+    <value>Число путешественников должно быть от 1 до 100.</value>
+  </data>
+  <data name="Validation_DaysRequired" xml:space="preserve">
+    <value>Укажите число дней поездки.</value>
+  </data>
+  <data name="Validation_DaysRange" xml:space="preserve">
+    <value>Число дней должно быть от 1 до 365.</value>
+  </data>
+  <data name="Validation_AccommodationNegative" xml:space="preserve">
+    <value>Стоимость жилья не может быть отрицательной.</value>
+  </data>
+  <data name="Validation_FoodNegative" xml:space="preserve">
+    <value>Стоимость питания не может быть отрицательной.</value>
+  </data>
+  <data name="Validation_TransportationNegative" xml:space="preserve">
+    <value>Стоимость транспорта не может быть отрицательной.</value>
+  </data>
+  <data name="Validation_ActivitiesNegative" xml:space="preserve">
+    <value>Стоимость развлечений не может быть отрицательной.</value>
+  </data>
+  <data name="Validation_FlightNegative" xml:space="preserve">
+    <value>Стоимость перелёта не может быть отрицательной.</value>
+  </data>
+  <data name="Validation_OtherNegative" xml:space="preserve">
+    <value>Прочие расходы не могут быть отрицательными.</value>
+  </data>
+</root>

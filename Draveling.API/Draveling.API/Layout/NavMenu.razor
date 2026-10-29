@@ -1,6 +1,9 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
+﻿@inject AppLanguage Lang
+@inject IStringLocalizer<AppStrings> L
+
+<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="">Draveling</a>
+        <a class="navbar-brand" href="@Lang.Href("")">Draveling</a>
     </div>
 </div>
 
@@ -9,14 +12,14 @@
 <div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
     <nav class="nav flex-column">
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+            <NavLink class="nav-link" href="@Lang.Href("")" Match="NavLinkMatch.All">
+                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> @L["Nav_Home"]
             </NavLink>
         </div>
 
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="trip-budget-calculator">
-                <span class="bi bi-calculator-fill-nav-menu" aria-hidden="true"></span> Trip Budget Calculator
+            <NavLink class="nav-link" href="@Lang.Href("trip-budget-calculator")">
+                <span class="bi bi-calculator-fill-nav-menu" aria-hidden="true"></span> @L["Nav_TripBudgetCalculator"]
             </NavLink>
         </div>
     </nav>

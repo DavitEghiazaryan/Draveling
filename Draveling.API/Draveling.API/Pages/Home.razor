@@ -1,12 +1,17 @@
 @page "/"
+@page "/hy"
+@page "/ru"
+@inject AppLanguage Lang
+@inject IStringLocalizer<AppStrings> L
 
-<PageTitle>Draveling – Simple Travel Planning Tools</PageTitle>
+<PageTitle>@L["Home_Title"]</PageTitle>
 <HeadContent>
-    <meta name="description" content="Draveling offers simple, free tools to help you plan your trip, starting with a trip budget calculator." />
+    <meta name="description" content="@L["Home_MetaDescription"]" />
 </HeadContent>
+<AlternateLanguageLinks />
 
-<h1>Plan your trip with Draveling</h1>
+<h1>@L["Home_Heading"]</h1>
 
-<p class="lead">Simple, free tools to help you plan your next vacation.</p>
+<p class="lead">@L["Home_Lead"]</p>
 
-<a class="btn btn-primary" href="trip-budget-calculator">Try the Trip Budget Calculator</a>
+<a class="btn btn-primary" href="@Lang.Href("trip-budget-calculator")">@L["Home_CalculatorLink"]</a>

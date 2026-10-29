@@ -1,16 +1,20 @@
 @page "/trip-budget-calculator"
+@page "/hy/trip-budget-calculator"
+@page "/ru/trip-budget-calculator"
 @using System.Globalization
 @using Draveling.API.Features.TripBudget
+@inject IStringLocalizer<AppStrings> L
 
-<PageTitle>Trip Budget Calculator – Estimate Your Vacation Cost | Draveling</PageTitle>
+<PageTitle>@L["Calc_Title"]</PageTitle>
 <HeadContent>
-    <meta name="description" content="Free trip budget calculator. Enter travelers, days, accommodation, food, transport, activities and flights to estimate your total vacation cost and cost per person." />
+    <meta name="description" content="@L["Calc_MetaDescription"]" />
 </HeadContent>
+<AlternateLanguageLinks />
 
 <div class="trip-budget">
     <header class="trip-budget-header">
-        <h1>Trip Budget Calculator</h1>
-        <p class="lead">Estimate how much money you need for your vacation. Enter your own cost estimates in USD and the totals update as you type.</p>
+        <h1>@L["Calc_Heading"]</h1>
+        <p class="lead">@L["Calc_Lead"]</p>
     </header>
 
     <div class="row g-4">
@@ -20,17 +24,17 @@
 
                 <section class="card budget-card mb-4">
                     <div class="card-body">
-                        <h2 class="h5 card-title">Trip basics</h2>
+                        <h2 class="h5 card-title">@L["Calc_SectionBasics"]</h2>
                         <div class="row g-3">
                             <div class="col-sm-6">
-                                <label for="travelers" class="form-label">Number of travelers</label>
+                                <label for="travelers" class="form-label">@L["Calc_Travelers"]</label>
                                 <input id="travelers" type="number" inputmode="numeric" min="1" max="@TripBudgetInput.MaxTravelers" step="1"
                                        class="@CssFor(nameof(_input.Travelers))"
                                        @bind="_input.Travelers" @bind:event="oninput" @bind:after="Recalculate" />
                                 <ValidationMessage For="() => _input.Travelers" />
                             </div>
                             <div class="col-sm-6">
-                                <label for="days" class="form-label">Number of trip days</label>
+                                <label for="days" class="form-label">@L["Calc_Days"]</label>
                                 <input id="days" type="number" inputmode="numeric" min="1" max="@TripBudgetInput.MaxDays" step="1"
                                        class="@CssFor(nameof(_input.Days))"
                                        @bind="_input.Days" @bind:event="oninput" @bind:after="Recalculate" />
@@ -42,21 +46,21 @@
 
                 <section class="card budget-card mb-4">
                     <div class="card-body">
-                        <h2 class="h5 card-title">Daily costs</h2>
+                        <h2 class="h5 card-title">@L["Calc_SectionDaily"]</h2>
                         <div class="row g-3">
                             <div class="col-sm-6">
-                                <label for="accommodation" class="form-label">Accommodation per night</label>
+                                <label for="accommodation" class="form-label">@L["Calc_Accommodation"]</label>
                                 <div class="input-group">
                                     <span class="input-group-text">$</span>
                                     <input id="accommodation" type="number" inputmode="decimal" min="0" step="0.01"
                                            class="@CssFor(nameof(_input.AccommodationPerNight))"
                                            @bind="_input.AccommodationPerNight" @bind:event="oninput" @bind:after="Recalculate" />
                                 </div>
-                                <div class="form-text">Total for the whole group. Nights are assumed to equal trip days.</div>
+                                <div class="form-text">@L["Calc_AccommodationHint"]</div>
                                 <ValidationMessage For="() => _input.AccommodationPerNight" />
                             </div>
                             <div class="col-sm-6">
-                                <label for="food" class="form-label">Food per person per day</label>
+                                <label for="food" class="form-label">@L["Calc_Food"]</label>
                                 <div class="input-group">
                                     <span class="input-group-text">$</span>
                                     <input id="food" type="number" inputmode="decimal" min="0" step="0.01"
@@ -66,25 +70,25 @@
                                 <ValidationMessage For="() => _input.FoodPerPersonPerDay" />
                             </div>
                             <div class="col-sm-6">
-                                <label for="transportation" class="form-label">Transportation per day</label>
+                                <label for="transportation" class="form-label">@L["Calc_Transportation"]</label>
                                 <div class="input-group">
                                     <span class="input-group-text">$</span>
                                     <input id="transportation" type="number" inputmode="decimal" min="0" step="0.01"
                                            class="@CssFor(nameof(_input.TransportationPerDay))"
                                            @bind="_input.TransportationPerDay" @bind:event="oninput" @bind:after="Recalculate" />
                                 </div>
-                                <div class="form-text">Local transport for the entire group.</div>
+                                <div class="form-text">@L["Calc_TransportationHint"]</div>
                                 <ValidationMessage For="() => _input.TransportationPerDay" />
                             </div>
                             <div class="col-sm-6">
-                                <label for="activities" class="form-label">Activities per person per day</label>
+                                <label for="activities" class="form-label">@L["Calc_Activities"]</label>
                                 <div class="input-group">
                                     <span class="input-group-text">$</span>
                                     <input id="activities" type="number" inputmode="decimal" min="0" step="0.01"
                                            class="@CssFor(nameof(_input.ActivitiesPerPersonPerDay))"
                                            @bind="_input.ActivitiesPerPersonPerDay" @bind:event="oninput" @bind:after="Recalculate" />
                                 </div>
-                                <div class="form-text">Sightseeing, tours and entrance fees.</div>
+                                <div class="form-text">@L["Calc_ActivitiesHint"]</div>
                                 <ValidationMessage For="() => _input.ActivitiesPerPersonPerDay" />
                             </div>
                         </div>
@@ -93,10 +97,10 @@
 
                 <section class="card budget-card mb-4">
                     <div class="card-body">
-                        <h2 class="h5 card-title">One-time costs</h2>
+                        <h2 class="h5 card-title">@L["Calc_SectionOneTime"]</h2>
                         <div class="row g-3">
                             <div class="col-sm-6">
-                                <label for="flights" class="form-label">Round-trip flight per person</label>
+                                <label for="flights" class="form-label">@L["Calc_Flights"]</label>
                                 <div class="input-group">
                                     <span class="input-group-text">$</span>
                                     <input id="flights" type="number" inputmode="decimal" min="0" step="0.01"
@@ -106,14 +110,14 @@
                                 <ValidationMessage For="() => _input.FlightPerPerson" />
                             </div>
                             <div class="col-sm-6">
-                                <label for="other" class="form-label">Other expenses for the trip</label>
+                                <label for="other" class="form-label">@L["Calc_Other"]</label>
                                 <div class="input-group">
                                     <span class="input-group-text">$</span>
                                     <input id="other" type="number" inputmode="decimal" min="0" step="0.01"
                                            class="@CssFor(nameof(_input.OtherExpenses))"
                                            @bind="_input.OtherExpenses" @bind:event="oninput" @bind:after="Recalculate" />
                                 </div>
-                                <div class="form-text">Insurance, visas, souvenirs, SIM cards and anything else.</div>
+                                <div class="form-text">@L["Calc_OtherHint"]</div>
                                 <ValidationMessage For="() => _input.OtherExpenses" />
                             </div>
                         </div>
@@ -121,7 +125,7 @@
                 </section>
 
                 <div class="d-flex gap-2">
-                    <button type="button" class="btn btn-outline-secondary" @onclick="Reset">Reset to defaults</button>
+                    <button type="button" class="btn btn-outline-secondary" @onclick="Reset">@L["Calc_Reset"]</button>
                 </div>
             </EditForm>
         </div>
@@ -129,51 +133,51 @@
         <div class="col-lg-5">
             <aside class="card results-card" aria-live="polite">
                 <div class="card-body">
-                    <h2 class="h5 card-title">Your estimate</h2>
+                    <h2 class="h5 card-title">@L["Results_Heading"]</h2>
 
                     @if (_result is { } r)
                     {
                         <div class="results-total">
-                            <span class="results-label">Total estimated trip cost</span>
+                            <span class="results-label">@L["Results_TotalLabel"]</span>
                             <span class="results-amount">@Usd(r.Total)</span>
-                            <span class="results-sub">@Usd(r.PerTraveler) per traveler · @r.Travelers @(r.Travelers == 1 ? "traveler" : "travelers"), @r.Days @(r.Days == 1 ? "day" : "days")</span>
+                            <span class="results-sub">@L["Results_PerTraveler"]: @Usd(r.PerTraveler) · @L["Results_Travelers"]: @r.Travelers · @L["Results_Days"]: @r.Days</span>
                         </div>
 
                         <table class="table table-sm results-table mb-2">
-                            <caption class="visually-hidden">Itemized expense breakdown</caption>
+                            <caption class="visually-hidden">@L["Results_BreakdownCaption"]</caption>
                             <tbody>
                                 <tr>
-                                    <th scope="row">Accommodation <small>(@r.Nights @(r.Nights == 1 ? "night" : "nights"))</small></th>
+                                    <th scope="row">@L["Results_Accommodation"] <small>(@L["Results_Nights"]: @r.Nights)</small></th>
                                     <td>@Usd(r.Accommodation)</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">Food</th>
+                                    <th scope="row">@L["Results_Food"]</th>
                                     <td>@Usd(r.Food)</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">Transportation</th>
+                                    <th scope="row">@L["Results_Transportation"]</th>
                                     <td>@Usd(r.Transportation)</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">Activities &amp; sightseeing</th>
+                                    <th scope="row">@L["Results_Activities"]</th>
                                     <td>@Usd(r.Activities)</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">Flights</th>
+                                    <th scope="row">@L["Results_Flights"]</th>
                                     <td>@Usd(r.Flights)</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">Other expenses</th>
+                                    <th scope="row">@L["Results_Other"]</th>
                                     <td>@Usd(r.Other)</td>
                                 </tr>
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <th scope="row">Total</th>
+                                    <th scope="row">@L["Results_Total"]</th>
                                     <td>@Usd(r.Total)</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">Per traveler</th>
+                                    <th scope="row">@L["Results_PerTraveler"]</th>
                                     <td>@Usd(r.PerTraveler)</td>
                                 </tr>
                             </tfoot>
@@ -181,10 +185,10 @@
                     }
                     else
                     {
-                        <p class="results-invalid mb-2">Fix the highlighted fields to see your estimate.</p>
+                        <p class="results-invalid mb-2">@L["Results_Invalid"]</p>
                     }
 
-                    <p class="results-note mb-0">All amounts are in USD and based on your own estimates. Accommodation is calculated for as many nights as trip days.</p>
+                    <p class="results-note mb-0">@L["Results_Note"]</p>
                 </div>
             </aside>
         </div>
@@ -221,5 +225,6 @@
             ? "form-control is-invalid"
             : "form-control";
 
+    // Amounts are always shown the same way regardless of language.
     private static string Usd(decimal value) => "$" + value.ToString("N2", CultureInfo.InvariantCulture);
 }

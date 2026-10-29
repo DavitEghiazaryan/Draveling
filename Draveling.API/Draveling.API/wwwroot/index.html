@@ -29,7 +29,37 @@
         <a href="." class="reload">Reload</a>
         <span class="dismiss">🗙</span>
     </div>
-    <script src="_framework/blazor.webassembly#[.{fingerprint}].js"></script>
+    <script src="_framework/blazor.webassembly#[.{fingerprint}].js" autostart="false"></script>
+    <script>
+        // Start the app in the language given by the URL prefix (/hy/..., /ru/...), English otherwise.
+        // Keep this list in sync with Localization/Languages.cs.
+        (function () {
+            var supported = ['hy', 'ru'];
+            var preferenceKey = 'draveling.lang';
+
+            var basePath = new URL(document.baseURI).pathname;
+            var relativePath = location.pathname.indexOf(basePath) === 0
+                ? location.pathname.substring(basePath.length)
+                : location.pathname.replace(/^\//, '');
+            var firstSegment = relativePath.split('/')[0];
+
+            var language = 'en';
+            if (supported.indexOf(firstSegment) >= 0) {
+                language = firstSegment;
+            } else {
+                // No prefix: send returning visitors to the language they chose earlier.
+                var preferred = null;
+                try { preferred = localStorage.getItem(preferenceKey); } catch (e) { }
+                if (preferred && supported.indexOf(preferred) >= 0) {
+                    location.replace(basePath + preferred + '/' + relativePath + location.search + location.hash);
+                    return;
+                }
+            }
+
+            document.documentElement.lang = language;
+            Blazor.start({ applicationCulture: language });
+        })();
+    </script>
 </body>
 
 </html>

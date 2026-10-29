@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- Navigation and layout -->
+  <data name="Nav_Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Nav_TripBudgetCalculator" xml:space="preserve">
+    <value>Trip Budget Calculator</value>
+  </data>
+  <data name="Language_Label" xml:space="preserve">
+    <value>Language</value>
+  </data>
+
+  <!-- Not found page -->
+  <data name="NotFound_Heading" xml:space="preserve">
+    <value>Page not found</value>
+  </data>
+  <data name="NotFound_Text" xml:space="preserve">
+    <value>Sorry, the page you are looking for does not exist.</value>
+  </data>
+  <data name="NotFound_HomeLink" xml:space="preserve">
+    <value>Go to the home page</value>
+  </data>
+
+  <!-- Home page -->
+  <data name="Home_Title" xml:space="preserve">
+    <value>Draveling – Simple Travel Planning Tools</value>
+  </data>
+  <data name="Home_MetaDescription" xml:space="preserve">
+    <value>Draveling offers simple, free tools to help you plan your trip, starting with a trip budget calculator.</value>
+  </data>
+  <data name="Home_Heading" xml:space="preserve">
+    <value>Plan your trip with Draveling</value>
+  </data>
+  <data name="Home_Lead" xml:space="preserve">
+    <value>Simple, free tools to help you plan your next vacation.</value>
+  </data>
+  <data name="Home_CalculatorLink" xml:space="preserve">
+    <value>Try the Trip Budget Calculator</value>
+  </data>
+
+  <!-- Trip Budget Calculator: page and form -->
+  <data name="Calc_Title" xml:space="preserve">
+    <value>Trip Budget Calculator – Estimate Your Vacation Cost | Draveling</value>
+  </data>
+  <data name="Calc_MetaDescription" xml:space="preserve">
+    <value>Free trip budget calculator. Enter travelers, days, accommodation, food, transport, activities and flights to estimate your total vacation cost and cost per person.</value>
+  </data>
+  <data name="Calc_Heading" xml:space="preserve">
+    <value>Trip Budget Calculator</value>
+  </data>
+  <data name="Calc_Lead" xml:space="preserve">
+    <value>Estimate how much money you need for your vacation. Enter your own cost estimates in USD and the totals update as you type.</value>
+  </data>
+  <data name="Calc_SectionBasics" xml:space="preserve">
+    <value>Trip basics</value>
+  </data>
+  <data name="Calc_Travelers" xml:space="preserve">
+    <value>Number of travelers</value>
+  </data>
+  <data name="Calc_Days" xml:space="preserve">
+    <value>Number of trip days</value>
+  </data>
+  <data name="Calc_SectionDaily" xml:space="preserve">
+    <value>Daily costs</value>
+  </data>
+  <data name="Calc_Accommodation" xml:space="preserve">
+    <value>Accommodation per night</value>
+  </data>
+  <data name="Calc_AccommodationHint" xml:space="preserve">
+    <value>Total for the whole group. Nights are assumed to equal trip days.</value>
+  </data>
+  <data name="Calc_Food" xml:space="preserve">
+    <value>Food per person per day</value>
+  </data>
+  <data name="Calc_Transportation" xml:space="preserve">
+    <value>Transportation per day</value>
+  </data>
+  <data name="Calc_TransportationHint" xml:space="preserve">
+    <value>Local transport for the entire group.</value>
+  </data>
+  <data name="Calc_Activities" xml:space="preserve">
+    <value>Activities per person per day</value>
+  </data>
+  <data name="Calc_ActivitiesHint" xml:space="preserve">
+    <value>Sightseeing, tours and entrance fees.</value>
+  </data>
+  <data name="Calc_SectionOneTime" xml:space="preserve">
+    <value>One-time costs</value>
+  </data>
+  <data name="Calc_Flights" xml:space="preserve">
+    <value>Round-trip flight per person</value>
+  </data>
+  <data name="Calc_Other" xml:space="preserve">
+    <value>Other expenses for the trip</value>
+  </data>
+  <data name="Calc_OtherHint" xml:space="preserve">
+    <value>Insurance, visas, souvenirs, SIM cards and anything else.</value>
+  </data>
+  <data name="Calc_Reset" xml:space="preserve">
+    <value>Reset to defaults</value>
+  </data>
+
+  <!-- Trip Budget Calculator: results -->
+  <data name="Results_Heading" xml:space="preserve">
+    <value>Your estimate</value>
+  </data>
+  <data name="Results_TotalLabel" xml:space="preserve">
+    <value>Total estimated trip cost</value>
+  </data>
+  <data name="Results_PerTraveler" xml:space="preserve">
+    <value>Per traveler</value>
+  </data>
+  <data name="Results_Travelers" xml:space="preserve">
+    <value>Travelers</value>
+  </data>
+  <data name="Results_Days" xml:space="preserve">
+    <value>Days</value>
+  </data>
+  <data name="Results_Nights" xml:space="preserve">
+    <value>Nights</value>
+  </data>
+  <data name="Results_BreakdownCaption" xml:space="preserve">
+    <value>Itemized expense breakdown</value>
+  </data>
+  <data name="Results_Accommodation" xml:space="preserve">
+    <value>Accommodation</value>
+  </data>
+  <data name="Results_Food" xml:space="preserve">
+    <value>Food</value>
+  </data>
+  <data name="Results_Transportation" xml:space="preserve">
+    <value>Transportation</value>
+  </data>
+  <data name="Results_Activities" xml:space="preserve">
+    <value>Activities &amp; sightseeing</value>
+  </data>
+  <data name="Results_Flights" xml:space="preserve">
+    <value>Flights</value>
+  </data>
+  <data name="Results_Other" xml:space="preserve">
+    <value>Other expenses</value>
+  </data>
+  <data name="Results_Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="Results_Invalid" xml:space="preserve">
+    <value>Fix the highlighted fields to see your estimate.</value>
+  </data>
+  <data name="Results_Note" xml:space="preserve">
+    <value>All amounts are in USD and based on your own estimates. Accommodation is calculated for as many nights as trip days.</value>
+  </data>
+
+  <!-- Trip Budget Calculator: validation -->
+  <data name="Validation_TravelersRequired" xml:space="preserve">
+    <value>Enter the number of travelers.</value>
+  </data>
+  <data name="Validation_TravelersRange" xml:space="preserve">
+    <value>Travelers must be between 1 and 100.</value>
+  </data>
+  <data name="Validation_DaysRequired" xml:space="preserve">
+    <value>Enter the number of trip days.</value>
+  </data>
+  <data name="Validation_DaysRange" xml:space="preserve">
+    <value>Trip days must be between 1 and 365.</value>
+  </data>
+  <data name="Validation_AccommodationNegative" xml:space="preserve">
+    <value>Accommodation cost cannot be negative.</value>
+  </data>
+  <data name="Validation_FoodNegative" xml:space="preserve">
+    <value>Food cost cannot be negative.</value>
+  </data>
+  <data name="Validation_TransportationNegative" xml:space="preserve">
+    <value>Transportation cost cannot be negative.</value>
+  </data>
+  <data name="Validation_ActivitiesNegative" xml:space="preserve">
+    <value>Activities cost cannot be negative.</value>
+  </data>
+  <data name="Validation_FlightNegative" xml:space="preserve">
+    <value>Flight cost cannot be negative.</value>
+  </data>
+  <data name="Validation_OtherNegative" xml:space="preserve">
+    <value>Other expenses cannot be negative.</value>
+  </data>
+</root>
