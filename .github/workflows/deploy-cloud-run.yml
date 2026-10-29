@@ -20,6 +20,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Check required secrets
+        env:
+          GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+        run: |
+          missing=0
+          [ -z "$GCP_PROJECT_ID" ] && echo "::error::Repository secret GCP_PROJECT_ID is missing or empty." && missing=1
+          [ -z "$GCP_SA_KEY" ] && echo "::error::Repository secret GCP_SA_KEY is missing or empty." && missing=1
+          [ "$missing" -eq 0 ] || exit 1
+          echo "Both secrets are present."
+
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
         with:
