@@ -1,5 +1,4 @@
 @page "/trip-budget-calculator"
-@rendermode InteractiveServer
 @using System.Globalization
 @using Draveling.API.Features.TripBudget
 
@@ -16,7 +15,7 @@
 
     <div class="row g-4">
         <div class="col-lg-7">
-            <EditForm EditContext="_editContext" OnSubmit="Recalculate" FormName="trip-budget">
+            <EditForm EditContext="_editContext" OnSubmit="Recalculate">
                 <DataAnnotationsValidator />
 
                 <section class="card budget-card mb-4">

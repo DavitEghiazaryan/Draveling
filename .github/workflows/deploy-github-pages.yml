@@ -1,0 +1,62 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+env:
+  PROJECT: Draveling.API/Draveling.API/Draveling.API.csproj
+  # Path the site is served from. Keep "/Draveling/" while using the
+  # username.github.io/Draveling address. Change to "/" once a custom domain is attached.
+  BASE_PATH: /Draveling/
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Publish
+        run: dotnet publish "$PROJECT" -c Release -o publish
+
+      - name: Prepare static site
+        run: |
+          SITE=publish/wwwroot
+          # Point the app at the folder it is served from
+          sed -i "s|<base href=\"/\" />|<base href=\"${BASE_PATH}\" />|" "$SITE/index.html"
+          # Serve the app for deep links such as /trip-budget-calculator
+          cp "$SITE/index.html" "$SITE/404.html"
+          # Let GitHub Pages serve the _framework folder
+          touch "$SITE/.nojekyll"
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: publish/wwwroot
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
