@@ -1,0 +1,226 @@
+@page "/trip-budget-calculator"
+@rendermode InteractiveServer
+@using System.Globalization
+@using Draveling.API.Features.TripBudget
+
+<PageTitle>Trip Budget Calculator – Estimate Your Vacation Cost | Draveling</PageTitle>
+<HeadContent>
+    <meta name="description" content="Free trip budget calculator. Enter travelers, days, accommodation, food, transport, activities and flights to estimate your total vacation cost and cost per person." />
+</HeadContent>
+
+<div class="trip-budget">
+    <header class="trip-budget-header">
+        <h1>Trip Budget Calculator</h1>
+        <p class="lead">Estimate how much money you need for your vacation. Enter your own cost estimates in USD and the totals update as you type.</p>
+    </header>
+
+    <div class="row g-4">
+        <div class="col-lg-7">
+            <EditForm EditContext="_editContext" OnSubmit="Recalculate" FormName="trip-budget">
+                <DataAnnotationsValidator />
+
+                <section class="card budget-card mb-4">
+                    <div class="card-body">
+                        <h2 class="h5 card-title">Trip basics</h2>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <label for="travelers" class="form-label">Number of travelers</label>
+                                <input id="travelers" type="number" inputmode="numeric" min="1" max="@TripBudgetInput.MaxTravelers" step="1"
+                                       class="@CssFor(nameof(_input.Travelers))"
+                                       @bind="_input.Travelers" @bind:event="oninput" @bind:after="Recalculate" />
+                                <ValidationMessage For="() => _input.Travelers" />
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="days" class="form-label">Number of trip days</label>
+                                <input id="days" type="number" inputmode="numeric" min="1" max="@TripBudgetInput.MaxDays" step="1"
+                                       class="@CssFor(nameof(_input.Days))"
+                                       @bind="_input.Days" @bind:event="oninput" @bind:after="Recalculate" />
+                                <ValidationMessage For="() => _input.Days" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card budget-card mb-4">
+                    <div class="card-body">
+                        <h2 class="h5 card-title">Daily costs</h2>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <label for="accommodation" class="form-label">Accommodation per night</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">$</span>
+                                    <input id="accommodation" type="number" inputmode="decimal" min="0" step="0.01"
+                                           class="@CssFor(nameof(_input.AccommodationPerNight))"
+                                           @bind="_input.AccommodationPerNight" @bind:event="oninput" @bind:after="Recalculate" />
+                                </div>
+                                <div class="form-text">Total for the whole group. Nights are assumed to equal trip days.</div>
+                                <ValidationMessage For="() => _input.AccommodationPerNight" />
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="food" class="form-label">Food per person per day</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">$</span>
+                                    <input id="food" type="number" inputmode="decimal" min="0" step="0.01"
+                                           class="@CssFor(nameof(_input.FoodPerPersonPerDay))"
+                                           @bind="_input.FoodPerPersonPerDay" @bind:event="oninput" @bind:after="Recalculate" />
+                                </div>
+                                <ValidationMessage For="() => _input.FoodPerPersonPerDay" />
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="transportation" class="form-label">Transportation per day</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">$</span>
+                                    <input id="transportation" type="number" inputmode="decimal" min="0" step="0.01"
+                                           class="@CssFor(nameof(_input.TransportationPerDay))"
+                                           @bind="_input.TransportationPerDay" @bind:event="oninput" @bind:after="Recalculate" />
+                                </div>
+                                <div class="form-text">Local transport for the entire group.</div>
+                                <ValidationMessage For="() => _input.TransportationPerDay" />
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="activities" class="form-label">Activities per person per day</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">$</span>
+                                    <input id="activities" type="number" inputmode="decimal" min="0" step="0.01"
+                                           class="@CssFor(nameof(_input.ActivitiesPerPersonPerDay))"
+                                           @bind="_input.ActivitiesPerPersonPerDay" @bind:event="oninput" @bind:after="Recalculate" />
+                                </div>
+                                <div class="form-text">Sightseeing, tours and entrance fees.</div>
+                                <ValidationMessage For="() => _input.ActivitiesPerPersonPerDay" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card budget-card mb-4">
+                    <div class="card-body">
+                        <h2 class="h5 card-title">One-time costs</h2>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <label for="flights" class="form-label">Round-trip flight per person</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">$</span>
+                                    <input id="flights" type="number" inputmode="decimal" min="0" step="0.01"
+                                           class="@CssFor(nameof(_input.FlightPerPerson))"
+                                           @bind="_input.FlightPerPerson" @bind:event="oninput" @bind:after="Recalculate" />
+                                </div>
+                                <ValidationMessage For="() => _input.FlightPerPerson" />
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="other" class="form-label">Other expenses for the trip</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">$</span>
+                                    <input id="other" type="number" inputmode="decimal" min="0" step="0.01"
+                                           class="@CssFor(nameof(_input.OtherExpenses))"
+                                           @bind="_input.OtherExpenses" @bind:event="oninput" @bind:after="Recalculate" />
+                                </div>
+                                <div class="form-text">Insurance, visas, souvenirs, SIM cards and anything else.</div>
+                                <ValidationMessage For="() => _input.OtherExpenses" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="d-flex gap-2">
+                    <button type="button" class="btn btn-outline-secondary" @onclick="Reset">Reset to defaults</button>
+                </div>
+            </EditForm>
+        </div>
+
+        <div class="col-lg-5">
+            <aside class="card results-card" aria-live="polite">
+                <div class="card-body">
+                    <h2 class="h5 card-title">Your estimate</h2>
+
+                    @if (_result is { } r)
+                    {
+                        <div class="results-total">
+                            <span class="results-label">Total estimated trip cost</span>
+                            <span class="results-amount">@Usd(r.Total)</span>
+                            <span class="results-sub">@Usd(r.PerTraveler) per traveler · @r.Travelers @(r.Travelers == 1 ? "traveler" : "travelers"), @r.Days @(r.Days == 1 ? "day" : "days")</span>
+                        </div>
+
+                        <table class="table table-sm results-table mb-2">
+                            <caption class="visually-hidden">Itemized expense breakdown</caption>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Accommodation <small>(@r.Nights @(r.Nights == 1 ? "night" : "nights"))</small></th>
+                                    <td>@Usd(r.Accommodation)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Food</th>
+                                    <td>@Usd(r.Food)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Transportation</th>
+                                    <td>@Usd(r.Transportation)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Activities &amp; sightseeing</th>
+                                    <td>@Usd(r.Activities)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Flights</th>
+                                    <td>@Usd(r.Flights)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Other expenses</th>
+                                    <td>@Usd(r.Other)</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th scope="row">Total</th>
+                                    <td>@Usd(r.Total)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Per traveler</th>
+                                    <td>@Usd(r.PerTraveler)</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    }
+                    else
+                    {
+                        <p class="results-invalid mb-2">Fix the highlighted fields to see your estimate.</p>
+                    }
+
+                    <p class="results-note mb-0">All amounts are in USD and based on your own estimates. Accommodation is calculated for as many nights as trip days.</p>
+                </div>
+            </aside>
+        </div>
+    </div>
+</div>
+
+@code {
+    private readonly TripBudgetInput _input = new();
+    private EditContext _editContext = default!;
+    private TripBudgetResult? _result;
+
+    protected override void OnInitialized()
+    {
+        _editContext = new EditContext(_input);
+        Recalculate();
+    }
+
+    private void Recalculate()
+    {
+        _result = _editContext.Validate()
+            ? Features.TripBudget.TripBudgetCalculator.Calculate(_input)
+            : null;
+    }
+
+    private void Reset()
+    {
+        _input.ResetToDefaults();
+        _editContext.MarkAsUnmodified();
+        Recalculate();
+    }
+
+    private string CssFor(string fieldName) =>
+        _editContext.GetValidationMessages(new FieldIdentifier(_input, fieldName)).Any()
+            ? "form-control is-invalid"
+            : "form-control";
+
+    private static string Usd(decimal value) => "$" + value.ToString("N2", CultureInfo.InvariantCulture);
+}

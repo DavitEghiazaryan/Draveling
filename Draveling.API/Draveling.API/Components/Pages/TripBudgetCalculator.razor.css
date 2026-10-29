@@ -1,0 +1,106 @@
+.trip-budget {
+    max-width: 1100px;
+}
+
+.trip-budget-header {
+    margin-bottom: 1.5rem;
+}
+
+    .trip-budget-header h1 {
+        font-weight: 700;
+        color: #0b3d5c;
+    }
+
+    .trip-budget-header .lead {
+        color: #4b5563;
+        max-width: 60ch;
+    }
+
+.budget-card {
+    border: 1px solid #e3e8ee;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(11, 61, 92, 0.06);
+}
+
+    .budget-card .card-title {
+        color: #0b3d5c;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+.results-card {
+    border: none;
+    border-radius: 0.75rem;
+    color: #fff;
+    background: linear-gradient(160deg, #0b3d5c 0%, #1b6ec2 100%);
+    box-shadow: 0 6px 20px rgba(11, 61, 92, 0.25);
+}
+
+    .results-card .card-title {
+        color: rgba(255, 255, 255, 0.85);
+        font-weight: 600;
+    }
+
+.results-total {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+}
+
+.results-label {
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+.results-amount {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.results-sub {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.results-table {
+    --bs-table-color: #fff;
+    --bs-table-bg: transparent;
+    --bs-table-border-color: rgba(255, 255, 255, 0.25);
+}
+
+    .results-table th {
+        font-weight: 500;
+    }
+
+    .results-table small {
+        opacity: 0.75;
+    }
+
+    .results-table td {
+        text-align: right;
+        white-space: nowrap;
+    }
+
+    .results-table tfoot th,
+    .results-table tfoot td {
+        font-weight: 700;
+    }
+
+.results-note,
+.results-invalid {
+    font-size: 0.85rem;
+    opacity: 0.85;
+}
+
+.results-invalid {
+    font-weight: 600;
+    opacity: 1;
+}
+
+@media (min-width: 992px) {
+    .results-card {
+        position: sticky;
+        top: 4.5rem;
+    }
+}
