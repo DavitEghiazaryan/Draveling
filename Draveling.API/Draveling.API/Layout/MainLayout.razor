@@ -1,16 +1,20 @@
 ﻿@inherits LayoutComponentBase
-<div class="page">
-    <div class="sidebar">
+@inject AppLanguage Lang
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="brand" href="@Lang.Href("")">
+            <img class="brand-logo" src="logo.jpg" alt="" width="40" height="30" />
+            <span>Draveling</span>
+        </a>
         <NavMenu />
+        <LanguageSwitcher />
     </div>
+</header>
 
-    <main>
-        <div class="top-row px-4">
-            <LanguageSwitcher />
-        </div>
-
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
-</div>
+<main class="site-main">
+    <div class="site-backdrop" aria-hidden="true"></div>
+    <div class="site-content">
+        @Body
+    </div>
+</main>

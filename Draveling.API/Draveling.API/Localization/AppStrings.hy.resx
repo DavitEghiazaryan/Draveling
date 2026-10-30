@@ -195,4 +195,43 @@
   <data name="Validation_OtherNegative" xml:space="preserve">
     <value>Այլ ծախսերը չեն կարող բացասական լինել։</value>
   </data>
+  <!-- Top navigation -->
+  <data name="Nav_About" xml:space="preserve">
+    <value>Մեր մասին</value>
+  </data>
+  <data name="Nav_Menu" xml:space="preserve">
+    <value>Ընտրացանկ</value>
+  </data>
+
+  <!-- About page -->
+  <data name="About_Title" xml:space="preserve">
+    <value>Draveling-ի մասին – Ճամփորդության պլանավորման անվճար գործիքներ</value>
+  </data>
+  <data name="About_MetaDescription" xml:space="preserve">
+    <value>Իմացեք, թե ինչ է Draveling-ը, ում համար է այն և ինչպես են աշխատում ճամփորդության պլանավորման անվճար գործիքները։</value>
+  </data>
+  <data name="About_Heading" xml:space="preserve">
+    <value>Draveling-ի մասին</value>
+  </data>
+  <data name="About_Lead" xml:space="preserve">
+    <value>Draveling-ը փոքր, անկախ կայք է՝ անվճար գործիքներով, որոնք ավելի պարզ են դարձնում ճամփորդության պլանավորումը։</value>
+  </data>
+  <data name="About_OfferHeading" xml:space="preserve">
+    <value>Ինչ ենք առաջարկում</value>
+  </data>
+  <data name="About_OfferText" xml:space="preserve">
+    <value>Մենք ստեղծում ենք գործնական գործիքներ, որոնք պատասխանում են ճամփորդության առօրյա հարցերին։ Մեր առաջին գործիքը՝ ճամփորդության բյուջեի հաշվիչը, օգնում է գնահատել, թե որքան կարժենա արձակուրդը՝ նախքան որևէ բան ամրագրելը։ Կայքի զարգացմանը զուգընթաց կավելանան նոր գործիքներ և ուղեցույցներ ուղղությունների մասին։</value>
+  </data>
+  <data name="About_HowHeading" xml:space="preserve">
+    <value>Ինչպես է այն աշխատում</value>
+  </data>
+  <data name="About_HowText" xml:space="preserve">
+    <value>Ամեն ինչ աշխատում է ձեր դիտարկիչում։ Գրանցում, հաշիվ կամ տեղադրում անհրաժեշտ չէ։ Մենք չենք պահպանում ձեր մուտքագրած թվերը, և կայքն անվճար է։</value>
+  </data>
+  <data name="About_EstimatesHeading" xml:space="preserve">
+    <value>Գնահատականների մասին</value>
+  </data>
+  <data name="About_EstimatesText" xml:space="preserve">
+    <value>Մեր գործիքներն աշխատում են ձեր տրամադրած թվերով։ Արդյունքները գնահատականներ են, որոնք նախատեսված են պլանավորմանն օգնելու համար, այլ ոչ թե ճշգրիտ գներ։ Ամրագրելուց առաջ միշտ ստուգեք ընթացիկ գներն ավիաընկերությունների, հյուրանոցների և տեղական ծառայություններ մատուցողների մոտ։</value>
+  </data>
 </root>

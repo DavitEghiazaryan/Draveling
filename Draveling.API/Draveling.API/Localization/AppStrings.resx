@@ -195,4 +195,43 @@
   <data name="Validation_OtherNegative" xml:space="preserve">
     <value>Other expenses cannot be negative.</value>
   </data>
+  <!-- Top navigation -->
+  <data name="Nav_About" xml:space="preserve">
+    <value>About us</value>
+  </data>
+  <data name="Nav_Menu" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+
+  <!-- About page -->
+  <data name="About_Title" xml:space="preserve">
+    <value>About Draveling – Free Travel Planning Tools</value>
+  </data>
+  <data name="About_MetaDescription" xml:space="preserve">
+    <value>Learn what Draveling is, who it is for and how its free travel planning tools work.</value>
+  </data>
+  <data name="About_Heading" xml:space="preserve">
+    <value>About Draveling</value>
+  </data>
+  <data name="About_Lead" xml:space="preserve">
+    <value>Draveling is a small, independent website with free tools that make trip planning simpler.</value>
+  </data>
+  <data name="About_OfferHeading" xml:space="preserve">
+    <value>What we offer</value>
+  </data>
+  <data name="About_OfferText" xml:space="preserve">
+    <value>We build practical tools that answer everyday travel questions. Our first tool, the Trip Budget Calculator, helps you estimate how much a vacation will cost before you book anything. More tools and destination guides will follow as the site grows.</value>
+  </data>
+  <data name="About_HowHeading" xml:space="preserve">
+    <value>How it works</value>
+  </data>
+  <data name="About_HowText" xml:space="preserve">
+    <value>Everything runs in your browser. There is no registration, no account and nothing to install. We do not store the numbers you enter, and the site is free to use.</value>
+  </data>
+  <data name="About_EstimatesHeading" xml:space="preserve">
+    <value>A note on estimates</value>
+  </data>
+  <data name="About_EstimatesText" xml:space="preserve">
+    <value>Our tools work with the figures you provide. Results are estimates meant to guide your planning, not exact prices. Always check current rates with airlines, hotels and local providers before booking.</value>
+  </data>
 </root>

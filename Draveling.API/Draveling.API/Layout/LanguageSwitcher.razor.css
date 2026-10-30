@@ -40,8 +40,7 @@
 .language-menu {
     position: absolute;
     top: calc(100% + 0.4rem);
-    left: 50%;
-    transform: translateX(-50%);
+    right: 0;
     z-index: 2;
     min-width: 11rem;
     padding: 0.35rem;

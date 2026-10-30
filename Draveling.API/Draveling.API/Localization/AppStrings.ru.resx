@@ -195,4 +195,43 @@
   <data name="Validation_OtherNegative" xml:space="preserve">
     <value>Прочие расходы не могут быть отрицательными.</value>
   </data>
+  <!-- Top navigation -->
+  <data name="Nav_About" xml:space="preserve">
+    <value>О нас</value>
+  </data>
+  <data name="Nav_Menu" xml:space="preserve">
+    <value>Меню</value>
+  </data>
+
+  <!-- About page -->
+  <data name="About_Title" xml:space="preserve">
+    <value>О Draveling – Бесплатные инструменты для планирования путешествий</value>
+  </data>
+  <data name="About_MetaDescription" xml:space="preserve">
+    <value>Узнайте, что такое Draveling, для кого он создан и как работают его бесплатные инструменты для планирования поездок.</value>
+  </data>
+  <data name="About_Heading" xml:space="preserve">
+    <value>О Draveling</value>
+  </data>
+  <data name="About_Lead" xml:space="preserve">
+    <value>Draveling — небольшой независимый сайт с бесплатными инструментами, которые упрощают планирование поездок.</value>
+  </data>
+  <data name="About_OfferHeading" xml:space="preserve">
+    <value>Что мы предлагаем</value>
+  </data>
+  <data name="About_OfferText" xml:space="preserve">
+    <value>Мы создаём практичные инструменты, которые отвечают на повседневные вопросы путешественников. Наш первый инструмент — калькулятор бюджета поездки — помогает оценить стоимость отпуска ещё до бронирования. По мере развития сайта появятся новые инструменты и путеводители по направлениям.</value>
+  </data>
+  <data name="About_HowHeading" xml:space="preserve">
+    <value>Как это работает</value>
+  </data>
+  <data name="About_HowText" xml:space="preserve">
+    <value>Всё работает прямо в браузере. Не нужны регистрация, аккаунт или установка. Мы не сохраняем введённые вами цифры, а сайт полностью бесплатен.</value>
+  </data>
+  <data name="About_EstimatesHeading" xml:space="preserve">
+    <value>О расчётах</value>
+  </data>
+  <data name="About_EstimatesText" xml:space="preserve">
+    <value>Наши инструменты работают с цифрами, которые вы указываете. Результаты — это оценки для планирования, а не точные цены. Перед бронированием всегда проверяйте актуальные цены у авиакомпаний, отелей и местных поставщиков услуг.</value>
+  </data>
 </root>

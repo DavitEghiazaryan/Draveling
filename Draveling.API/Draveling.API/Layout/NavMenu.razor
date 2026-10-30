@@ -1,26 +1,48 @@
-﻿@inject AppLanguage Lang
+﻿@implements IDisposable
+@inject AppLanguage Lang
 @inject IStringLocalizer<AppStrings> L
+@inject NavigationManager Navigation
 
-<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="@Lang.Href("")">Draveling</a>
-    </div>
-</div>
+<nav id="site-nav" class="site-nav @(_isOpen ? "open" : null)" aria-label="@L["Nav_Menu"]">
+    <NavLink class="nav-link" href="@Lang.Href("")" Match="NavLinkMatch.All">@L["Nav_Home"]</NavLink>
+    <NavLink class="nav-link" href="@Lang.Href("trip-budget-calculator")">@L["Nav_TripBudgetCalculator"]</NavLink>
+    <NavLink class="nav-link" href="@Lang.Href("about")">@L["Nav_About"]</NavLink>
+</nav>
 
-<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+<button type="button" class="menu-toggle" aria-label="@L["Nav_Menu"]" aria-controls="site-nav" aria-expanded="@_isOpen" @onclick="Toggle">
+    <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+        @if (_isOpen)
+        {
+            <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        }
+        else
+        {
+            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        }
+    </svg>
+</button>
 
-<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
-    <nav class="nav flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="@Lang.Href("")" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> @L["Nav_Home"]
-            </NavLink>
-        </div>
+@code {
+    private bool _isOpen;
 
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="@Lang.Href("trip-budget-calculator")">
-                <span class="bi bi-calculator-fill-nav-menu" aria-hidden="true"></span> @L["Nav_TripBudgetCalculator"]
-            </NavLink>
-        </div>
-    </nav>
-</div>
+    protected override void OnInitialized()
+    {
+        Navigation.LocationChanged += OnLocationChanged;
+    }
+
+    private void Toggle() => _isOpen = !_isOpen;
+
+    private void OnLocationChanged(object? sender, LocationChangedEventArgs e)
+    {
+        if (_isOpen)
+        {
+            _isOpen = false;
+            StateHasChanged();
+        }
+    }
+
+    public void Dispose()
+    {
+        Navigation.LocationChanged -= OnLocationChanged;
+    }
+}

@@ -1,0 +1,31 @@
+.about {
+    max-width: 70ch;
+}
+
+.about-header {
+    margin-bottom: 1.5rem;
+}
+
+    .about-header h1 {
+        font-weight: 700;
+        color: #0b3d5c;
+    }
+
+    .about-header .lead {
+        color: #4b5563;
+    }
+
+.about-section {
+    margin-bottom: 1.5rem;
+}
+
+    .about-section h2 {
+        color: #0b3d5c;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+
+    .about-section p {
+        color: #374151;
+        line-height: 1.6;
+    }

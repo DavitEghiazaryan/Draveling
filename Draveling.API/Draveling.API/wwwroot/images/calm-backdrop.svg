@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" preserveAspectRatio="xMidYMin slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e3eff9" />
+      <stop offset="1" stop-color="#ffffff" />
+    </linearGradient>
+    <radialGradient id="glow" cx="0.82" cy="0.18" r="0.35">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="700" fill="url(#sky)" />
+  <rect width="1600" height="700" fill="url(#glow)" />
+
+  <!-- distant ridge -->
+  <path d="M0 420 C 180 380, 300 330, 460 360 C 620 390, 720 320, 880 350 C 1040 380, 1160 300, 1320 340 C 1440 370, 1520 350, 1600 330 L1600 700 L0 700 Z" fill="#cfe0f0" />
+  <!-- middle ridge -->
+  <path d="M0 500 C 200 460, 340 480, 520 450 C 700 420, 820 470, 1000 440 C 1180 410, 1300 460, 1600 430 L1600 700 L0 700 Z" fill="#bcd4ea" opacity="0.9" />
+  <!-- calm water -->
+  <path d="M0 580 C 260 560, 520 600, 800 575 C 1080 550, 1340 590, 1600 565 L1600 700 L0 700 Z" fill="#a9c8e4" opacity="0.8" />
+  <path d="M0 640 C 300 620, 600 660, 900 635 C 1150 615, 1400 650, 1600 630 L1600 700 L0 700 Z" fill="#d8e8f5" />
+</svg>
