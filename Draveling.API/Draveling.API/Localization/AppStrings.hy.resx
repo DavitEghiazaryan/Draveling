@@ -234,4 +234,371 @@
   <data name="About_EstimatesText" xml:space="preserve">
     <value>Մեր գործիքներն աշխատում են ձեր տրամադրած թվերով։ Արդյունքները գնահատականներ են, որոնք նախատեսված են պլանավորմանն օգնելու համար, այլ ոչ թե ճշգրիտ գներ։ Ամրագրելուց առաջ միշտ ստուգեք ընթացիկ գներն ավիաընկերությունների, հյուրանոցների և տեղական ծառայություններ մատուցողների մոտ։</value>
   </data>
+  <!-- Packing List Generator -->
+  <data name="Nav_PackingList" xml:space="preserve">
+    <value>Ճամպրուկի ցուցակ</value>
+  </data>
+  <data name="Pack_Title" xml:space="preserve">
+    <value>Ճամպրուկի ցուցակի գեներատոր – Անվճար ճամփորդական ստուգաթերթ | Draveling</value>
+  </data>
+  <data name="Pack_MetaDescription" xml:space="preserve">
+    <value>Անվճար ճամպրուկի ցուցակի գեներատոր։ Ընտրեք ճամփորդության տեսակը, եղանակը և տևողությունը՝ ստանալու անձնական ստուգաթերթ, որը կարող եք նշել և տպել։</value>
+  </data>
+  <data name="Pack_Heading" xml:space="preserve">
+    <value>Ճամպրուկի ցուցակի գեներատոր</value>
+  </data>
+  <data name="Pack_Lead" xml:space="preserve">
+    <value>Պատմեք ձեր ճամփորդության մասին և ստացեք դրան համապատասխան ստուգաթերթ։ Նշեք իրերը հավաքելուն զուգընթաց։ Ցուցակը մեկ անձի համար է և պահպանվում է ձեր դիտարկիչում։</value>
+  </data>
+  <data name="Pack_SectionTrip" xml:space="preserve">
+    <value>Ձեր ճամփորդությունը</value>
+  </data>
+  <data name="Pack_TripType" xml:space="preserve">
+    <value>Ճամփորդության տեսակ</value>
+  </data>
+  <data name="Pack_Weather" xml:space="preserve">
+    <value>Սպասվող եղանակ</value>
+  </data>
+  <data name="Pack_Days" xml:space="preserve">
+    <value>Ճամփորդության տևողությունը օրերով</value>
+  </data>
+  <data name="Pack_Extras" xml:space="preserve">
+    <value>Լրացուցիչ</value>
+  </data>
+  <data name="Pack_Progress" xml:space="preserve">
+    <value>Հավաքված է {0}-ը {1}-ից</value>
+  </data>
+  <data name="Pack_AllPacked" xml:space="preserve">
+    <value>Ամեն ինչ հավաքված է։ Բարի ճանապարհ։</value>
+  </data>
+  <data name="Pack_Reset" xml:space="preserve">
+    <value>Մաքրել ցուցակը</value>
+  </data>
+  <data name="Pack_Print" xml:space="preserve">
+    <value>Տպել</value>
+  </data>
+  <data name="Pack_Invalid" xml:space="preserve">
+    <value>Ուղղեք նշված դաշտերը՝ ցուցակը տեսնելու համար։</value>
+  </data>
+  <data name="Pack_Note" xml:space="preserve">
+    <value>Քանակները մեկ անձի համար են։ Մեկ շաբաթից երկար ճամփորդությունների դեպքում ենթադրվում է, որ կարող եք լվացք անել։</value>
+  </data>
+  <data name="TripType_CityBreak" xml:space="preserve">
+    <value>Քաղաքային հանգիստ</value>
+  </data>
+  <data name="TripType_Beach" xml:space="preserve">
+    <value>Ծովափնյա հանգիստ</value>
+  </data>
+  <data name="TripType_Outdoor" xml:space="preserve">
+    <value>Բնություն և արշավ</value>
+  </data>
+  <data name="TripType_Business" xml:space="preserve">
+    <value>Գործուղում</value>
+  </data>
+  <data name="TripType_Winter" xml:space="preserve">
+    <value>Ձմեռային հանգիստ և դահուկ</value>
+  </data>
+  <data name="Weather_Hot" xml:space="preserve">
+    <value>Շոգ</value>
+  </data>
+  <data name="Weather_Mild" xml:space="preserve">
+    <value>Մեղմ</value>
+  </data>
+  <data name="Weather_Cold" xml:space="preserve">
+    <value>Ցուրտ</value>
+  </data>
+  <data name="Extra_Abroad" xml:space="preserve">
+    <value>Ճամփորդություն արտասահման</value>
+  </data>
+  <data name="Extra_Children" xml:space="preserve">
+    <value>Ճամփորդություն երեխաների հետ</value>
+  </data>
+  <data name="Extra_Car" xml:space="preserve">
+    <value>Մեքենայի վարձույթ</value>
+  </data>
+  <data name="Extra_Work" xml:space="preserve">
+    <value>Աշխատանք ճամփորդության ընթացքում</value>
+  </data>
+  <data name="Category_Documents" xml:space="preserve">
+    <value>Փաստաթղթեր և գումար</value>
+  </data>
+  <data name="Category_Clothing" xml:space="preserve">
+    <value>Հագուստ և կոշիկ</value>
+  </data>
+  <data name="Category_Toiletries" xml:space="preserve">
+    <value>Հիգիենայի պարագաներ</value>
+  </data>
+  <data name="Category_Electronics" xml:space="preserve">
+    <value>Էլեկտրոնիկա</value>
+  </data>
+  <data name="Category_Health" xml:space="preserve">
+    <value>Առողջություն</value>
+  </data>
+  <data name="Category_Misc" xml:space="preserve">
+    <value>Այլ անհրաժեշտ իրեր</value>
+  </data>
+  <data name="Validation_PackDaysRequired" xml:space="preserve">
+    <value>Նշեք ճամփորդության տևողությունը։</value>
+  </data>
+  <data name="Validation_PackDaysRange" xml:space="preserve">
+    <value>Տևողությունը պետք է լինի 1-ից 60 օր։</value>
+  </data>
+  <data name="Item_IdCard" xml:space="preserve">
+    <value>Անձը հաստատող փաստաթուղթ</value>
+  </data>
+  <data name="Item_Passport" xml:space="preserve">
+    <value>Անձնագիր</value>
+  </data>
+  <data name="Item_Visa" xml:space="preserve">
+    <value>Վիզա կամ մուտքի թույլտվություն</value>
+  </data>
+  <data name="Item_TravelInsurance" xml:space="preserve">
+    <value>Ճամփորդական ապահովագրություն</value>
+  </data>
+  <data name="Item_Bookings" xml:space="preserve">
+    <value>Տոմսեր և ամրագրումների հաստատումներ</value>
+  </data>
+  <data name="Item_BankCards" xml:space="preserve">
+    <value>Բանկային քարտեր և կանխիկ գումար</value>
+  </data>
+  <data name="Item_LocalCurrency" xml:space="preserve">
+    <value>Տեղական արժույթ</value>
+  </data>
+  <data name="Item_DocumentCopies" xml:space="preserve">
+    <value>Փաստաթղթերի պատճեններ՝ տպված կամ հեռախոսում</value>
+  </data>
+  <data name="Item_DrivingLicence" xml:space="preserve">
+    <value>Վարորդական իրավունք</value>
+  </data>
+  <data name="Item_ChildDocuments" xml:space="preserve">
+    <value>Երեխաների փաստաթղթեր</value>
+  </data>
+  <data name="Item_EmergencyContacts" xml:space="preserve">
+    <value>Արտակարգ իրավիճակների հեռախոսահամարներ</value>
+  </data>
+  <data name="Item_Underwear" xml:space="preserve">
+    <value>Ներքնազգեստ</value>
+  </data>
+  <data name="Item_Socks" xml:space="preserve">
+    <value>Գուլպաներ</value>
+  </data>
+  <data name="Item_TShirts" xml:space="preserve">
+    <value>Շապիկներ</value>
+  </data>
+  <data name="Item_LongSleeves" xml:space="preserve">
+    <value>Երկարաթև վերնաշապիկներ</value>
+  </data>
+  <data name="Item_Trousers" xml:space="preserve">
+    <value>Տաբատ կամ ջինս</value>
+  </data>
+  <data name="Item_Shorts" xml:space="preserve">
+    <value>Շորտեր կամ կիսաշրջազգեստներ</value>
+  </data>
+  <data name="Item_Sweater" xml:space="preserve">
+    <value>Սվիտեր կամ կապյուշոնով բլուզ</value>
+  </data>
+  <data name="Item_LightJacket" xml:space="preserve">
+    <value>Թեթև բաճկոն</value>
+  </data>
+  <data name="Item_WarmJacket" xml:space="preserve">
+    <value>Տաք բաճկոն կամ վերարկու</value>
+  </data>
+  <data name="Item_SkiJacket" xml:space="preserve">
+    <value>Դահուկային բաճկոն</value>
+  </data>
+  <data name="Item_SkiTrousers" xml:space="preserve">
+    <value>Դահուկային տաբատ</value>
+  </data>
+  <data name="Item_ThermalUnderwear" xml:space="preserve">
+    <value>Ջերմապահ ներքնազգեստ</value>
+  </data>
+  <data name="Item_RainJacket" xml:space="preserve">
+    <value>Անձրևանոց բաճկոն</value>
+  </data>
+  <data name="Item_Swimwear" xml:space="preserve">
+    <value>Լողազգեստ</value>
+  </data>
+  <data name="Item_Sandals" xml:space="preserve">
+    <value>Սանդալներ կամ հողաթափեր</value>
+  </data>
+  <data name="Item_WalkingShoes" xml:space="preserve">
+    <value>Հարմարավետ կոշիկներ քայլելու համար</value>
+  </data>
+  <data name="Item_HikingBoots" xml:space="preserve">
+    <value>Արշավային կոշիկներ</value>
+  </data>
+  <data name="Item_BusinessOutfits" xml:space="preserve">
+    <value>Գործնական հագուստ</value>
+  </data>
+  <data name="Item_DressShoes" xml:space="preserve">
+    <value>Դասական կոշիկներ</value>
+  </data>
+  <data name="Item_Belt" xml:space="preserve">
+    <value>Գոտի</value>
+  </data>
+  <data name="Item_Sleepwear" xml:space="preserve">
+    <value>Քնազգեստ</value>
+  </data>
+  <data name="Item_SunHat" xml:space="preserve">
+    <value>Արևային գլխարկ կամ կեպի</value>
+  </data>
+  <data name="Item_WarmAccessories" xml:space="preserve">
+    <value>Տաք գլխարկ, ձեռնոցներ և շարֆ</value>
+  </data>
+  <data name="Item_SkiGloves" xml:space="preserve">
+    <value>Դահուկային ձեռնոցներ</value>
+  </data>
+  <data name="Item_Sunglasses" xml:space="preserve">
+    <value>Արևային ակնոց</value>
+  </data>
+  <data name="Item_LaundryBag" xml:space="preserve">
+    <value>Լվացքի պայուսակ</value>
+  </data>
+  <data name="Item_Toothbrush" xml:space="preserve">
+    <value>Ատամի խոզանակ և մածուկ</value>
+  </data>
+  <data name="Item_Deodorant" xml:space="preserve">
+    <value>Դեզոդորանտ</value>
+  </data>
+  <data name="Item_Shampoo" xml:space="preserve">
+    <value>Շամպուն և լոգանքի գել՝ ճամփորդական չափի</value>
+  </data>
+  <data name="Item_Razor" xml:space="preserve">
+    <value>Ածելի և սափրվելու պարագաներ</value>
+  </data>
+  <data name="Item_Hairbrush" xml:space="preserve">
+    <value>Մազերի խոզանակ կամ սանր</value>
+  </data>
+  <data name="Item_NailClippers" xml:space="preserve">
+    <value>Եղունգների մկրատ</value>
+  </data>
+  <data name="Item_HandSanitizer" xml:space="preserve">
+    <value>Ձեռքերի ախտահանիչ</value>
+  </data>
+  <data name="Item_Sunscreen" xml:space="preserve">
+    <value>Արևապաշտպան քսուք</value>
+  </data>
+  <data name="Item_AfterSun" xml:space="preserve">
+    <value>Արևայրուքից հետո խնամքի լոսյոն</value>
+  </data>
+  <data name="Item_LipBalm" xml:space="preserve">
+    <value>Շրթունքների բալզամ</value>
+  </data>
+  <data name="Item_Moisturizer" xml:space="preserve">
+    <value>Խոնավեցնող քսուք</value>
+  </data>
+  <data name="Item_InsectRepellent" xml:space="preserve">
+    <value>Միջատների վանող միջոց</value>
+  </data>
+  <data name="Item_WetWipes" xml:space="preserve">
+    <value>Խոնավ անձեռոցիկներ</value>
+  </data>
+  <data name="Item_PhoneCharger" xml:space="preserve">
+    <value>Հեռախոս և լիցքավորիչ</value>
+  </data>
+  <data name="Item_PowerBank" xml:space="preserve">
+    <value>Արտաքին մարտկոց</value>
+  </data>
+  <data name="Item_Headphones" xml:space="preserve">
+    <value>Ականջակալներ</value>
+  </data>
+  <data name="Item_PlugAdapter" xml:space="preserve">
+    <value>Վարդակի ադապտեր</value>
+  </data>
+  <data name="Item_Camera" xml:space="preserve">
+    <value>Ֆոտոխցիկ և հիշողության քարտ</value>
+  </data>
+  <data name="Item_Laptop" xml:space="preserve">
+    <value>Նոթբուք և լիցքավորիչ</value>
+  </data>
+  <data name="Item_Headset" xml:space="preserve">
+    <value>Խոսափողով ականջակալ զանգերի համար</value>
+  </data>
+  <data name="Item_CarCharger" xml:space="preserve">
+    <value>Մեքենայի լիցքավորիչ և հեռախոսի ամրակ</value>
+  </data>
+  <data name="Item_Medications" xml:space="preserve">
+    <value>Անձնական դեղեր</value>
+  </data>
+  <data name="Item_FirstAidKit" xml:space="preserve">
+    <value>Փոքր առաջին օգնության հավաքածու</value>
+  </data>
+  <data name="Item_Painkillers" xml:space="preserve">
+    <value>Ցավազրկողներ</value>
+  </data>
+  <data name="Item_BlisterPlasters" xml:space="preserve">
+    <value>Սպեղանիներ բշտիկների համար</value>
+  </data>
+  <data name="Item_MotionSickness" xml:space="preserve">
+    <value>Ճանապարհային հիվանդության հաբեր</value>
+  </data>
+  <data name="Item_StomachRemedy" xml:space="preserve">
+    <value>Ստամոքսի դեղ և ռեհիդրատացիոն աղեր</value>
+  </data>
+  <data name="Item_AllergyMedicine" xml:space="preserve">
+    <value>Հակաալերգիկ դեղ</value>
+  </data>
+  <data name="Item_ChildMedicine" xml:space="preserve">
+    <value>Մանկական դեղեր և ջերմաչափ</value>
+  </data>
+  <data name="Item_PrescriptionCopies" xml:space="preserve">
+    <value>Դեղատոմսերի պատճեններ</value>
+  </data>
+  <data name="Item_DayBackpack" xml:space="preserve">
+    <value>Փոքր ուսապարկ</value>
+  </data>
+  <data name="Item_WaterBottle" xml:space="preserve">
+    <value>Բազմակի օգտագործման ջրի շիշ</value>
+  </data>
+  <data name="Item_Snacks" xml:space="preserve">
+    <value>Թեթև ուտեստներ</value>
+  </data>
+  <data name="Item_TravelPillow" xml:space="preserve">
+    <value>Ճամփորդական բարձ, ականջախցաններ և աչքի դիմակ</value>
+  </data>
+  <data name="Item_Umbrella" xml:space="preserve">
+    <value>Փոքր հովանոց</value>
+  </data>
+  <data name="Item_BeachTowel" xml:space="preserve">
+    <value>Լողափի սրբիչ</value>
+  </data>
+  <data name="Item_DryBag" xml:space="preserve">
+    <value>Ջրակայուն պայուսակ հեռախոսի և արժեքավոր իրերի համար</value>
+  </data>
+  <data name="Item_KidsEntertainment" xml:space="preserve">
+    <value>Խաղեր և զվարճանքներ երեխաների համար</value>
+  </data>
+  <data name="Item_Stroller" xml:space="preserve">
+    <value>Մանկասայլակ կամ մանկական կրիչ</value>
+  </data>
+  <data name="Item_WorkDocuments" xml:space="preserve">
+    <value>Աշխատանքային փաստաթղթեր</value>
+  </data>
+  <data name="Item_NotebookPen" xml:space="preserve">
+    <value>Նոթատետր և գրիչ</value>
+  </data>
+  <data name="Item_BusinessCards" xml:space="preserve">
+    <value>Այցեքարտեր</value>
+  </data>
+  <data name="Item_LuggageLocks" xml:space="preserve">
+    <value>Ճամպրուկի կողպեքներ</value>
+  </data>
+  <data name="Item_SkiGoggles" xml:space="preserve">
+    <value>Դահուկային ակնոց</value>
+  </data>
+  <data name="Item_SkiPass" xml:space="preserve">
+    <value>Դահուկային անցաթուղթ կամ վարձույթի հաստատում</value>
+  </data>
+  <data name="Item_TrekkingPoles" xml:space="preserve">
+    <value>Արշավային ձեռնափայտեր</value>
+  </data>
+  <data name="Item_OfflineMaps" xml:space="preserve">
+    <value>Օֆլայն քարտեզներ</value>
+  </data>
+  <data name="Item_Headlamp" xml:space="preserve">
+    <value>Ճակատի լապտեր կամ լապտեր</value>
+  </data>
+  <data name="Item_LaundryDetergent" xml:space="preserve">
+    <value>Ճամփորդական լվացքի միջոց</value>
+  </data>
 </root>

@@ -234,4 +234,371 @@
   <data name="About_EstimatesText" xml:space="preserve">
     <value>Our tools work with the figures you provide. Results are estimates meant to guide your planning, not exact prices. Always check current rates with airlines, hotels and local providers before booking.</value>
   </data>
+  <!-- Packing List Generator -->
+  <data name="Nav_PackingList" xml:space="preserve">
+    <value>Packing List</value>
+  </data>
+  <data name="Pack_Title" xml:space="preserve">
+    <value>Packing List Generator – Free Travel Checklist | Draveling</value>
+  </data>
+  <data name="Pack_MetaDescription" xml:space="preserve">
+    <value>Free packing list generator. Choose your trip type, weather and length to get a personal travel checklist you can tick off and print.</value>
+  </data>
+  <data name="Pack_Heading" xml:space="preserve">
+    <value>Packing List Generator</value>
+  </data>
+  <data name="Pack_Lead" xml:space="preserve">
+    <value>Tell us about your trip and get a checklist made for it. Tick items off as you pack. The list is per person and stays saved in your browser.</value>
+  </data>
+  <data name="Pack_SectionTrip" xml:space="preserve">
+    <value>Your trip</value>
+  </data>
+  <data name="Pack_TripType" xml:space="preserve">
+    <value>Trip type</value>
+  </data>
+  <data name="Pack_Weather" xml:space="preserve">
+    <value>Expected weather</value>
+  </data>
+  <data name="Pack_Days" xml:space="preserve">
+    <value>Trip length in days</value>
+  </data>
+  <data name="Pack_Extras" xml:space="preserve">
+    <value>Extras</value>
+  </data>
+  <data name="Pack_Progress" xml:space="preserve">
+    <value>{0} of {1} packed</value>
+  </data>
+  <data name="Pack_AllPacked" xml:space="preserve">
+    <value>Everything is packed. Have a great trip!</value>
+  </data>
+  <data name="Pack_Reset" xml:space="preserve">
+    <value>Reset list</value>
+  </data>
+  <data name="Pack_Print" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="Pack_Invalid" xml:space="preserve">
+    <value>Fix the highlighted fields to see your list.</value>
+  </data>
+  <data name="Pack_Note" xml:space="preserve">
+    <value>Quantities are per person. Trips longer than a week assume you can do laundry.</value>
+  </data>
+  <data name="TripType_CityBreak" xml:space="preserve">
+    <value>City break</value>
+  </data>
+  <data name="TripType_Beach" xml:space="preserve">
+    <value>Beach holiday</value>
+  </data>
+  <data name="TripType_Outdoor" xml:space="preserve">
+    <value>Outdoor and hiking</value>
+  </data>
+  <data name="TripType_Business" xml:space="preserve">
+    <value>Business trip</value>
+  </data>
+  <data name="TripType_Winter" xml:space="preserve">
+    <value>Winter and ski</value>
+  </data>
+  <data name="Weather_Hot" xml:space="preserve">
+    <value>Hot</value>
+  </data>
+  <data name="Weather_Mild" xml:space="preserve">
+    <value>Mild</value>
+  </data>
+  <data name="Weather_Cold" xml:space="preserve">
+    <value>Cold</value>
+  </data>
+  <data name="Extra_Abroad" xml:space="preserve">
+    <value>Traveling abroad</value>
+  </data>
+  <data name="Extra_Children" xml:space="preserve">
+    <value>Traveling with children</value>
+  </data>
+  <data name="Extra_Car" xml:space="preserve">
+    <value>Renting a car</value>
+  </data>
+  <data name="Extra_Work" xml:space="preserve">
+    <value>Working during the trip</value>
+  </data>
+  <data name="Category_Documents" xml:space="preserve">
+    <value>Documents and money</value>
+  </data>
+  <data name="Category_Clothing" xml:space="preserve">
+    <value>Clothing and shoes</value>
+  </data>
+  <data name="Category_Toiletries" xml:space="preserve">
+    <value>Toiletries</value>
+  </data>
+  <data name="Category_Electronics" xml:space="preserve">
+    <value>Electronics</value>
+  </data>
+  <data name="Category_Health" xml:space="preserve">
+    <value>Health</value>
+  </data>
+  <data name="Category_Misc" xml:space="preserve">
+    <value>Other essentials</value>
+  </data>
+  <data name="Validation_PackDaysRequired" xml:space="preserve">
+    <value>Enter the trip length.</value>
+  </data>
+  <data name="Validation_PackDaysRange" xml:space="preserve">
+    <value>Trip length must be between 1 and 60 days.</value>
+  </data>
+  <data name="Item_IdCard" xml:space="preserve">
+    <value>ID card</value>
+  </data>
+  <data name="Item_Passport" xml:space="preserve">
+    <value>Passport</value>
+  </data>
+  <data name="Item_Visa" xml:space="preserve">
+    <value>Visa or entry permit</value>
+  </data>
+  <data name="Item_TravelInsurance" xml:space="preserve">
+    <value>Travel insurance policy</value>
+  </data>
+  <data name="Item_Bookings" xml:space="preserve">
+    <value>Tickets and booking confirmations</value>
+  </data>
+  <data name="Item_BankCards" xml:space="preserve">
+    <value>Bank cards and some cash</value>
+  </data>
+  <data name="Item_LocalCurrency" xml:space="preserve">
+    <value>Local currency</value>
+  </data>
+  <data name="Item_DocumentCopies" xml:space="preserve">
+    <value>Copies of documents, printed or on your phone</value>
+  </data>
+  <data name="Item_DrivingLicence" xml:space="preserve">
+    <value>Driving licence</value>
+  </data>
+  <data name="Item_ChildDocuments" xml:space="preserve">
+    <value>Children's documents</value>
+  </data>
+  <data name="Item_EmergencyContacts" xml:space="preserve">
+    <value>Emergency contact numbers</value>
+  </data>
+  <data name="Item_Underwear" xml:space="preserve">
+    <value>Underwear</value>
+  </data>
+  <data name="Item_Socks" xml:space="preserve">
+    <value>Socks</value>
+  </data>
+  <data name="Item_TShirts" xml:space="preserve">
+    <value>T-shirts</value>
+  </data>
+  <data name="Item_LongSleeves" xml:space="preserve">
+    <value>Long-sleeve shirts</value>
+  </data>
+  <data name="Item_Trousers" xml:space="preserve">
+    <value>Trousers or jeans</value>
+  </data>
+  <data name="Item_Shorts" xml:space="preserve">
+    <value>Shorts or skirts</value>
+  </data>
+  <data name="Item_Sweater" xml:space="preserve">
+    <value>Sweater or hoodie</value>
+  </data>
+  <data name="Item_LightJacket" xml:space="preserve">
+    <value>Light jacket</value>
+  </data>
+  <data name="Item_WarmJacket" xml:space="preserve">
+    <value>Warm jacket or coat</value>
+  </data>
+  <data name="Item_SkiJacket" xml:space="preserve">
+    <value>Ski jacket</value>
+  </data>
+  <data name="Item_SkiTrousers" xml:space="preserve">
+    <value>Ski trousers</value>
+  </data>
+  <data name="Item_ThermalUnderwear" xml:space="preserve">
+    <value>Thermal base layers</value>
+  </data>
+  <data name="Item_RainJacket" xml:space="preserve">
+    <value>Rain jacket</value>
+  </data>
+  <data name="Item_Swimwear" xml:space="preserve">
+    <value>Swimwear</value>
+  </data>
+  <data name="Item_Sandals" xml:space="preserve">
+    <value>Sandals or flip-flops</value>
+  </data>
+  <data name="Item_WalkingShoes" xml:space="preserve">
+    <value>Comfortable walking shoes</value>
+  </data>
+  <data name="Item_HikingBoots" xml:space="preserve">
+    <value>Hiking boots</value>
+  </data>
+  <data name="Item_BusinessOutfits" xml:space="preserve">
+    <value>Business outfits</value>
+  </data>
+  <data name="Item_DressShoes" xml:space="preserve">
+    <value>Dress shoes</value>
+  </data>
+  <data name="Item_Belt" xml:space="preserve">
+    <value>Belt</value>
+  </data>
+  <data name="Item_Sleepwear" xml:space="preserve">
+    <value>Sleepwear</value>
+  </data>
+  <data name="Item_SunHat" xml:space="preserve">
+    <value>Sun hat or cap</value>
+  </data>
+  <data name="Item_WarmAccessories" xml:space="preserve">
+    <value>Warm hat, gloves and scarf</value>
+  </data>
+  <data name="Item_SkiGloves" xml:space="preserve">
+    <value>Ski gloves</value>
+  </data>
+  <data name="Item_Sunglasses" xml:space="preserve">
+    <value>Sunglasses</value>
+  </data>
+  <data name="Item_LaundryBag" xml:space="preserve">
+    <value>Laundry bag</value>
+  </data>
+  <data name="Item_Toothbrush" xml:space="preserve">
+    <value>Toothbrush and toothpaste</value>
+  </data>
+  <data name="Item_Deodorant" xml:space="preserve">
+    <value>Deodorant</value>
+  </data>
+  <data name="Item_Shampoo" xml:space="preserve">
+    <value>Shampoo and shower gel, travel size</value>
+  </data>
+  <data name="Item_Razor" xml:space="preserve">
+    <value>Razor and shaving supplies</value>
+  </data>
+  <data name="Item_Hairbrush" xml:space="preserve">
+    <value>Hairbrush or comb</value>
+  </data>
+  <data name="Item_NailClippers" xml:space="preserve">
+    <value>Nail clippers</value>
+  </data>
+  <data name="Item_HandSanitizer" xml:space="preserve">
+    <value>Hand sanitizer</value>
+  </data>
+  <data name="Item_Sunscreen" xml:space="preserve">
+    <value>Sunscreen</value>
+  </data>
+  <data name="Item_AfterSun" xml:space="preserve">
+    <value>After-sun lotion</value>
+  </data>
+  <data name="Item_LipBalm" xml:space="preserve">
+    <value>Lip balm</value>
+  </data>
+  <data name="Item_Moisturizer" xml:space="preserve">
+    <value>Moisturizer</value>
+  </data>
+  <data name="Item_InsectRepellent" xml:space="preserve">
+    <value>Insect repellent</value>
+  </data>
+  <data name="Item_WetWipes" xml:space="preserve">
+    <value>Wet wipes</value>
+  </data>
+  <data name="Item_PhoneCharger" xml:space="preserve">
+    <value>Phone and charger</value>
+  </data>
+  <data name="Item_PowerBank" xml:space="preserve">
+    <value>Power bank</value>
+  </data>
+  <data name="Item_Headphones" xml:space="preserve">
+    <value>Headphones</value>
+  </data>
+  <data name="Item_PlugAdapter" xml:space="preserve">
+    <value>Travel plug adapter</value>
+  </data>
+  <data name="Item_Camera" xml:space="preserve">
+    <value>Camera and memory card</value>
+  </data>
+  <data name="Item_Laptop" xml:space="preserve">
+    <value>Laptop and charger</value>
+  </data>
+  <data name="Item_Headset" xml:space="preserve">
+    <value>Headset for calls</value>
+  </data>
+  <data name="Item_CarCharger" xml:space="preserve">
+    <value>Car charger and phone mount</value>
+  </data>
+  <data name="Item_Medications" xml:space="preserve">
+    <value>Personal medications</value>
+  </data>
+  <data name="Item_FirstAidKit" xml:space="preserve">
+    <value>Small first-aid kit</value>
+  </data>
+  <data name="Item_Painkillers" xml:space="preserve">
+    <value>Painkillers</value>
+  </data>
+  <data name="Item_BlisterPlasters" xml:space="preserve">
+    <value>Blister plasters</value>
+  </data>
+  <data name="Item_MotionSickness" xml:space="preserve">
+    <value>Motion sickness tablets</value>
+  </data>
+  <data name="Item_StomachRemedy" xml:space="preserve">
+    <value>Stomach remedy and rehydration salts</value>
+  </data>
+  <data name="Item_AllergyMedicine" xml:space="preserve">
+    <value>Allergy medicine</value>
+  </data>
+  <data name="Item_ChildMedicine" xml:space="preserve">
+    <value>Children's medicine and thermometer</value>
+  </data>
+  <data name="Item_PrescriptionCopies" xml:space="preserve">
+    <value>Copies of prescriptions</value>
+  </data>
+  <data name="Item_DayBackpack" xml:space="preserve">
+    <value>Day backpack</value>
+  </data>
+  <data name="Item_WaterBottle" xml:space="preserve">
+    <value>Reusable water bottle</value>
+  </data>
+  <data name="Item_Snacks" xml:space="preserve">
+    <value>Snacks</value>
+  </data>
+  <data name="Item_TravelPillow" xml:space="preserve">
+    <value>Travel pillow, earplugs and eye mask</value>
+  </data>
+  <data name="Item_Umbrella" xml:space="preserve">
+    <value>Compact umbrella</value>
+  </data>
+  <data name="Item_BeachTowel" xml:space="preserve">
+    <value>Beach towel</value>
+  </data>
+  <data name="Item_DryBag" xml:space="preserve">
+    <value>Waterproof bag for phone and valuables</value>
+  </data>
+  <data name="Item_KidsEntertainment" xml:space="preserve">
+    <value>Games and entertainment for kids</value>
+  </data>
+  <data name="Item_Stroller" xml:space="preserve">
+    <value>Stroller or child carrier</value>
+  </data>
+  <data name="Item_WorkDocuments" xml:space="preserve">
+    <value>Work documents</value>
+  </data>
+  <data name="Item_NotebookPen" xml:space="preserve">
+    <value>Notebook and pen</value>
+  </data>
+  <data name="Item_BusinessCards" xml:space="preserve">
+    <value>Business cards</value>
+  </data>
+  <data name="Item_LuggageLocks" xml:space="preserve">
+    <value>Luggage locks</value>
+  </data>
+  <data name="Item_SkiGoggles" xml:space="preserve">
+    <value>Ski goggles</value>
+  </data>
+  <data name="Item_SkiPass" xml:space="preserve">
+    <value>Ski pass or rental confirmation</value>
+  </data>
+  <data name="Item_TrekkingPoles" xml:space="preserve">
+    <value>Trekking poles</value>
+  </data>
+  <data name="Item_OfflineMaps" xml:space="preserve">
+    <value>Offline maps</value>
+  </data>
+  <data name="Item_Headlamp" xml:space="preserve">
+    <value>Headlamp or flashlight</value>
+  </data>
+  <data name="Item_LaundryDetergent" xml:space="preserve">
+    <value>Travel laundry detergent</value>
+  </data>
 </root>

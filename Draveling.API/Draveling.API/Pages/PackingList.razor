@@ -1,0 +1,257 @@
+@page "/packing-list"
+@page "/hy/packing-list"
+@page "/ru/packing-list"
+@using System.Text.Json
+@using Draveling.API.Features.PackingList
+@inject IStringLocalizer<AppStrings> L
+@inject IJSRuntime JS
+
+<PageTitle>@L["Pack_Title"]</PageTitle>
+<HeadContent>
+    <meta name="description" content="@L["Pack_MetaDescription"]" />
+</HeadContent>
+<AlternateLanguageLinks />
+
+<div class="packing">
+    <header class="packing-header">
+        <h1>@L["Pack_Heading"]</h1>
+        <p class="lead">@L["Pack_Lead"]</p>
+    </header>
+
+    <div class="row g-4">
+        <div class="col-lg-5 pack-form-col">
+            <EditForm EditContext="_editContext" OnSubmit="OnInputChanged">
+                <DataAnnotationsValidator />
+
+                <section class="card pack-card">
+                    <div class="card-body">
+                        <h2 class="h5 card-title">@L["Pack_SectionTrip"]</h2>
+
+                        <div class="mb-3">
+                            <label for="trip-type" class="form-label">@L["Pack_TripType"]</label>
+                            <select id="trip-type" class="form-select" @bind="_input.TripType" @bind:after="OnInputChanged">
+                                @foreach (var type in Enum.GetValues<TripType>())
+                                {
+                                    <option value="@type">@L[$"TripType_{type}"]</option>
+                                }
+                            </select>
+                        </div>
+
+                        <fieldset class="mb-3">
+                            <legend class="form-label">@L["Pack_Weather"]</legend>
+                            <div class="btn-group w-100" role="group">
+                                @foreach (var weather in Enum.GetValues<Weather>())
+                                {
+                                    <input type="radio" class="btn-check" name="weather" id="weather-@weather" autocomplete="off"
+                                           checked="@(_input.Weather == weather)" @onchange="() => SetWeather(weather)" />
+                                    <label class="btn btn-outline-primary" for="weather-@weather">@L[$"Weather_{weather}"]</label>
+                                }
+                            </div>
+                        </fieldset>
+
+                        <div class="mb-3">
+                            <label for="pack-days" class="form-label">@L["Pack_Days"]</label>
+                            <input id="pack-days" type="number" inputmode="numeric" min="1" max="@PackingListInput.MaxDays" step="1"
+                                   class="@(_editContext.GetValidationMessages(new FieldIdentifier(_input, nameof(_input.Days))).Any() ? "form-control is-invalid" : "form-control")"
+                                   @bind="_input.Days" @bind:event="oninput" @bind:after="OnInputChanged" />
+                            <ValidationMessage For="() => _input.Days" />
+                        </div>
+
+                        <fieldset>
+                            <legend class="form-label">@L["Pack_Extras"]</legend>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="extra-abroad" @bind="_input.Abroad" @bind:after="OnInputChanged" />
+                                <label class="form-check-label" for="extra-abroad">@L["Extra_Abroad"]</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="extra-children" @bind="_input.Children" @bind:after="OnInputChanged" />
+                                <label class="form-check-label" for="extra-children">@L["Extra_Children"]</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="extra-car" @bind="_input.Car" @bind:after="OnInputChanged" />
+                                <label class="form-check-label" for="extra-car">@L["Extra_Car"]</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="extra-work" @bind="_input.Work" @bind:after="OnInputChanged" />
+                                <label class="form-check-label" for="extra-work">@L["Extra_Work"]</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                </section>
+
+                <div class="d-flex gap-2 mt-3 pack-actions">
+                    <button type="button" class="btn btn-outline-secondary" @onclick="ResetAsync">@L["Pack_Reset"]</button>
+                    <button type="button" class="btn btn-primary" @onclick="PrintAsync" disabled="@(_groups is null)">@L["Pack_Print"]</button>
+                </div>
+            </EditForm>
+        </div>
+
+        <div class="col-lg-7 pack-results-col">
+            <section class="card pack-results" aria-live="polite">
+                <div class="card-body">
+                    @if (_groups is { } groups)
+                    {
+                        <div class="pack-progress">
+                            <div class="d-flex justify-content-between align-items-baseline mb-1">
+                                <span class="pack-progress-label">@string.Format(L["Pack_Progress"], PackedCount, TotalCount)</span>
+                                <span class="pack-progress-percent">@Percent%</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="@Percent">
+                                <div class="progress-bar" style="width: @(Percent)%"></div>
+                            </div>
+                            @if (TotalCount > 0 && PackedCount == TotalCount)
+                            {
+                                <p class="pack-done mb-0 mt-2">@L["Pack_AllPacked"]</p>
+                            }
+                        </div>
+
+                        @foreach (var (category, entries) in groups)
+                        {
+                            <section class="pack-group">
+                                <h2 class="h6 pack-group-title">@L[$"Category_{category}"]</h2>
+                                <ul class="pack-list">
+                                    @foreach (var entry in entries)
+                                    {
+                                        var isChecked = _checked.Contains(entry.Key);
+                                        <li>
+                                            <label class="pack-item @(isChecked ? "packed" : null)">
+                                                <input type="checkbox" class="form-check-input" checked="@isChecked" @onchange="() => ToggleAsync(entry.Key)" />
+                                                <span class="pack-name">@L[$"Item_{entry.Key}"]</span>
+                                                @if (entry.Quantity is { } quantity)
+                                                {
+                                                    <span class="pack-qty">× @quantity</span>
+                                                }
+                                            </label>
+                                        </li>
+                                    }
+                                </ul>
+                            </section>
+                        }
+                    }
+                    else
+                    {
+                        <p class="pack-invalid mb-0">@L["Pack_Invalid"]</p>
+                    }
+
+                    <p class="pack-note mb-0">@L["Pack_Note"]</p>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+@code {
+    private const string StorageKey = "draveling.packing-list";
+
+    private readonly PackingListInput _input = new();
+    private readonly HashSet<string> _checked = [];
+    private EditContext _editContext = default!;
+    private IReadOnlyList<(PackingCategory Category, IReadOnlyList<PackingListEntry> Entries)>? _groups;
+
+    private int TotalCount => _groups?.Sum(g => g.Entries.Count) ?? 0;
+    private int PackedCount => _groups?.Sum(g => g.Entries.Count(e => _checked.Contains(e.Key))) ?? 0;
+    private int Percent => TotalCount == 0 ? 0 : (int)Math.Round(100.0 * PackedCount / TotalCount);
+
+    protected override void OnInitialized()
+    {
+        _editContext = new EditContext(_input);
+        Regenerate();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!firstRender)
+        {
+            return;
+        }
+
+        var saved = await LoadAsync();
+        if (saved is null)
+        {
+            return;
+        }
+
+        _input.CopyFrom(saved.Input);
+        _checked.Clear();
+        _checked.UnionWith(saved.Checked);
+        Regenerate();
+        StateHasChanged();
+    }
+
+    private void Regenerate()
+    {
+        _groups = _editContext.Validate()
+            ? PackingListGenerator.Generate(_input)
+            : null;
+    }
+
+    private async Task OnInputChanged()
+    {
+        Regenerate();
+        await SaveAsync();
+    }
+
+    private Task SetWeather(Weather weather)
+    {
+        _input.Weather = weather;
+        return OnInputChanged();
+    }
+
+    private async Task ToggleAsync(string key)
+    {
+        if (!_checked.Remove(key))
+        {
+            _checked.Add(key);
+        }
+
+        await SaveAsync();
+    }
+
+    private async Task ResetAsync()
+    {
+        _input.ResetToDefaults();
+        _checked.Clear();
+        _editContext.MarkAsUnmodified();
+        Regenerate();
+
+        try
+        {
+            await JS.InvokeVoidAsync("localStorage.removeItem", StorageKey);
+        }
+        catch (JSException)
+        {
+            // Storage unavailable; nothing to clear.
+        }
+    }
+
+    private async Task PrintAsync()
+    {
+        await JS.InvokeVoidAsync("window.print");
+    }
+
+    private async Task SaveAsync()
+    {
+        try
+        {
+            var json = JsonSerializer.Serialize(new PackingListState(_input, _checked), PackingListJsonContext.Default.PackingListState);
+            await JS.InvokeVoidAsync("localStorage.setItem", StorageKey, json);
+        }
+        catch (JSException)
+        {
+            // Storage can be blocked (private mode, disabled cookies). The page still works for this visit.
+        }
+    }
+
+    private async Task<PackingListState?> LoadAsync()
+    {
+        try
+        {
+            var json = await JS.InvokeAsync<string?>("localStorage.getItem", StorageKey);
+            return json is null ? null : JsonSerializer.Deserialize(json, PackingListJsonContext.Default.PackingListState);
+        }
+        catch (Exception e) when (e is JSException or JsonException)
+        {
+            return null;
+        }
+    }
+}

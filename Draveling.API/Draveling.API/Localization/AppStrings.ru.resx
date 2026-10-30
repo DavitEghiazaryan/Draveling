@@ -234,4 +234,371 @@
   <data name="About_EstimatesText" xml:space="preserve">
     <value>Наши инструменты работают с цифрами, которые вы указываете. Результаты — это оценки для планирования, а не точные цены. Перед бронированием всегда проверяйте актуальные цены у авиакомпаний, отелей и местных поставщиков услуг.</value>
   </data>
+  <!-- Packing List Generator -->
+  <data name="Nav_PackingList" xml:space="preserve">
+    <value>Список вещей</value>
+  </data>
+  <data name="Pack_Title" xml:space="preserve">
+    <value>Генератор списка вещей – Бесплатный чек-лист для поездки | Draveling</value>
+  </data>
+  <data name="Pack_MetaDescription" xml:space="preserve">
+    <value>Бесплатный генератор списка вещей. Выберите тип поездки, погоду и длительность, чтобы получить персональный чек-лист, который можно отмечать и распечатать.</value>
+  </data>
+  <data name="Pack_Heading" xml:space="preserve">
+    <value>Генератор списка вещей</value>
+  </data>
+  <data name="Pack_Lead" xml:space="preserve">
+    <value>Расскажите о поездке и получите чек-лист, составленный под неё. Отмечайте вещи по мере сбора. Список рассчитан на одного человека и сохраняется в вашем браузере.</value>
+  </data>
+  <data name="Pack_SectionTrip" xml:space="preserve">
+    <value>Ваша поездка</value>
+  </data>
+  <data name="Pack_TripType" xml:space="preserve">
+    <value>Тип поездки</value>
+  </data>
+  <data name="Pack_Weather" xml:space="preserve">
+    <value>Ожидаемая погода</value>
+  </data>
+  <data name="Pack_Days" xml:space="preserve">
+    <value>Длительность поездки в днях</value>
+  </data>
+  <data name="Pack_Extras" xml:space="preserve">
+    <value>Дополнительно</value>
+  </data>
+  <data name="Pack_Progress" xml:space="preserve">
+    <value>Собрано {0} из {1}</value>
+  </data>
+  <data name="Pack_AllPacked" xml:space="preserve">
+    <value>Всё собрано. Хорошей поездки!</value>
+  </data>
+  <data name="Pack_Reset" xml:space="preserve">
+    <value>Сбросить список</value>
+  </data>
+  <data name="Pack_Print" xml:space="preserve">
+    <value>Распечатать</value>
+  </data>
+  <data name="Pack_Invalid" xml:space="preserve">
+    <value>Исправьте выделенные поля, чтобы увидеть список.</value>
+  </data>
+  <data name="Pack_Note" xml:space="preserve">
+    <value>Количество указано на одного человека. Для поездок дольше недели предполагается возможность стирки.</value>
+  </data>
+  <data name="TripType_CityBreak" xml:space="preserve">
+    <value>Городская поездка</value>
+  </data>
+  <data name="TripType_Beach" xml:space="preserve">
+    <value>Пляжный отдых</value>
+  </data>
+  <data name="TripType_Outdoor" xml:space="preserve">
+    <value>Природа и походы</value>
+  </data>
+  <data name="TripType_Business" xml:space="preserve">
+    <value>Командировка</value>
+  </data>
+  <data name="TripType_Winter" xml:space="preserve">
+    <value>Зимний отдых и лыжи</value>
+  </data>
+  <data name="Weather_Hot" xml:space="preserve">
+    <value>Жарко</value>
+  </data>
+  <data name="Weather_Mild" xml:space="preserve">
+    <value>Умеренно</value>
+  </data>
+  <data name="Weather_Cold" xml:space="preserve">
+    <value>Холодно</value>
+  </data>
+  <data name="Extra_Abroad" xml:space="preserve">
+    <value>Поездка за границу</value>
+  </data>
+  <data name="Extra_Children" xml:space="preserve">
+    <value>Поездка с детьми</value>
+  </data>
+  <data name="Extra_Car" xml:space="preserve">
+    <value>Аренда автомобиля</value>
+  </data>
+  <data name="Extra_Work" xml:space="preserve">
+    <value>Работа во время поездки</value>
+  </data>
+  <data name="Category_Documents" xml:space="preserve">
+    <value>Документы и деньги</value>
+  </data>
+  <data name="Category_Clothing" xml:space="preserve">
+    <value>Одежда и обувь</value>
+  </data>
+  <data name="Category_Toiletries" xml:space="preserve">
+    <value>Средства гигиены</value>
+  </data>
+  <data name="Category_Electronics" xml:space="preserve">
+    <value>Электроника</value>
+  </data>
+  <data name="Category_Health" xml:space="preserve">
+    <value>Здоровье</value>
+  </data>
+  <data name="Category_Misc" xml:space="preserve">
+    <value>Прочее необходимое</value>
+  </data>
+  <data name="Validation_PackDaysRequired" xml:space="preserve">
+    <value>Укажите длительность поездки.</value>
+  </data>
+  <data name="Validation_PackDaysRange" xml:space="preserve">
+    <value>Длительность должна быть от 1 до 60 дней.</value>
+  </data>
+  <data name="Item_IdCard" xml:space="preserve">
+    <value>Удостоверение личности</value>
+  </data>
+  <data name="Item_Passport" xml:space="preserve">
+    <value>Загранпаспорт</value>
+  </data>
+  <data name="Item_Visa" xml:space="preserve">
+    <value>Виза или разрешение на въезд</value>
+  </data>
+  <data name="Item_TravelInsurance" xml:space="preserve">
+    <value>Туристическая страховка</value>
+  </data>
+  <data name="Item_Bookings" xml:space="preserve">
+    <value>Билеты и подтверждения бронирований</value>
+  </data>
+  <data name="Item_BankCards" xml:space="preserve">
+    <value>Банковские карты и немного наличных</value>
+  </data>
+  <data name="Item_LocalCurrency" xml:space="preserve">
+    <value>Местная валюта</value>
+  </data>
+  <data name="Item_DocumentCopies" xml:space="preserve">
+    <value>Копии документов, распечатанные или в телефоне</value>
+  </data>
+  <data name="Item_DrivingLicence" xml:space="preserve">
+    <value>Водительские права</value>
+  </data>
+  <data name="Item_ChildDocuments" xml:space="preserve">
+    <value>Документы детей</value>
+  </data>
+  <data name="Item_EmergencyContacts" xml:space="preserve">
+    <value>Номера экстренных контактов</value>
+  </data>
+  <data name="Item_Underwear" xml:space="preserve">
+    <value>Нижнее бельё</value>
+  </data>
+  <data name="Item_Socks" xml:space="preserve">
+    <value>Носки</value>
+  </data>
+  <data name="Item_TShirts" xml:space="preserve">
+    <value>Футболки</value>
+  </data>
+  <data name="Item_LongSleeves" xml:space="preserve">
+    <value>Рубашки с длинным рукавом</value>
+  </data>
+  <data name="Item_Trousers" xml:space="preserve">
+    <value>Брюки или джинсы</value>
+  </data>
+  <data name="Item_Shorts" xml:space="preserve">
+    <value>Шорты или юбки</value>
+  </data>
+  <data name="Item_Sweater" xml:space="preserve">
+    <value>Свитер или худи</value>
+  </data>
+  <data name="Item_LightJacket" xml:space="preserve">
+    <value>Лёгкая куртка</value>
+  </data>
+  <data name="Item_WarmJacket" xml:space="preserve">
+    <value>Тёплая куртка или пальто</value>
+  </data>
+  <data name="Item_SkiJacket" xml:space="preserve">
+    <value>Горнолыжная куртка</value>
+  </data>
+  <data name="Item_SkiTrousers" xml:space="preserve">
+    <value>Горнолыжные штаны</value>
+  </data>
+  <data name="Item_ThermalUnderwear" xml:space="preserve">
+    <value>Термобельё</value>
+  </data>
+  <data name="Item_RainJacket" xml:space="preserve">
+    <value>Дождевик</value>
+  </data>
+  <data name="Item_Swimwear" xml:space="preserve">
+    <value>Купальник или плавки</value>
+  </data>
+  <data name="Item_Sandals" xml:space="preserve">
+    <value>Сандалии или шлёпанцы</value>
+  </data>
+  <data name="Item_WalkingShoes" xml:space="preserve">
+    <value>Удобная обувь для ходьбы</value>
+  </data>
+  <data name="Item_HikingBoots" xml:space="preserve">
+    <value>Треккинговые ботинки</value>
+  </data>
+  <data name="Item_BusinessOutfits" xml:space="preserve">
+    <value>Деловые комплекты одежды</value>
+  </data>
+  <data name="Item_DressShoes" xml:space="preserve">
+    <value>Классические туфли</value>
+  </data>
+  <data name="Item_Belt" xml:space="preserve">
+    <value>Ремень</value>
+  </data>
+  <data name="Item_Sleepwear" xml:space="preserve">
+    <value>Одежда для сна</value>
+  </data>
+  <data name="Item_SunHat" xml:space="preserve">
+    <value>Панама или кепка</value>
+  </data>
+  <data name="Item_WarmAccessories" xml:space="preserve">
+    <value>Тёплая шапка, перчатки и шарф</value>
+  </data>
+  <data name="Item_SkiGloves" xml:space="preserve">
+    <value>Горнолыжные перчатки</value>
+  </data>
+  <data name="Item_Sunglasses" xml:space="preserve">
+    <value>Солнцезащитные очки</value>
+  </data>
+  <data name="Item_LaundryBag" xml:space="preserve">
+    <value>Мешок для грязного белья</value>
+  </data>
+  <data name="Item_Toothbrush" xml:space="preserve">
+    <value>Зубная щётка и паста</value>
+  </data>
+  <data name="Item_Deodorant" xml:space="preserve">
+    <value>Дезодорант</value>
+  </data>
+  <data name="Item_Shampoo" xml:space="preserve">
+    <value>Шампунь и гель для душа в дорожном формате</value>
+  </data>
+  <data name="Item_Razor" xml:space="preserve">
+    <value>Бритва и принадлежности для бритья</value>
+  </data>
+  <data name="Item_Hairbrush" xml:space="preserve">
+    <value>Расчёска</value>
+  </data>
+  <data name="Item_NailClippers" xml:space="preserve">
+    <value>Кусачки для ногтей</value>
+  </data>
+  <data name="Item_HandSanitizer" xml:space="preserve">
+    <value>Антисептик для рук</value>
+  </data>
+  <data name="Item_Sunscreen" xml:space="preserve">
+    <value>Солнцезащитный крем</value>
+  </data>
+  <data name="Item_AfterSun" xml:space="preserve">
+    <value>Лосьон после загара</value>
+  </data>
+  <data name="Item_LipBalm" xml:space="preserve">
+    <value>Бальзам для губ</value>
+  </data>
+  <data name="Item_Moisturizer" xml:space="preserve">
+    <value>Увлажняющий крем</value>
+  </data>
+  <data name="Item_InsectRepellent" xml:space="preserve">
+    <value>Средство от насекомых</value>
+  </data>
+  <data name="Item_WetWipes" xml:space="preserve">
+    <value>Влажные салфетки</value>
+  </data>
+  <data name="Item_PhoneCharger" xml:space="preserve">
+    <value>Телефон и зарядное устройство</value>
+  </data>
+  <data name="Item_PowerBank" xml:space="preserve">
+    <value>Внешний аккумулятор</value>
+  </data>
+  <data name="Item_Headphones" xml:space="preserve">
+    <value>Наушники</value>
+  </data>
+  <data name="Item_PlugAdapter" xml:space="preserve">
+    <value>Переходник для розетки</value>
+  </data>
+  <data name="Item_Camera" xml:space="preserve">
+    <value>Фотоаппарат и карта памяти</value>
+  </data>
+  <data name="Item_Laptop" xml:space="preserve">
+    <value>Ноутбук и зарядное устройство</value>
+  </data>
+  <data name="Item_Headset" xml:space="preserve">
+    <value>Гарнитура для звонков</value>
+  </data>
+  <data name="Item_CarCharger" xml:space="preserve">
+    <value>Автомобильная зарядка и держатель для телефона</value>
+  </data>
+  <data name="Item_Medications" xml:space="preserve">
+    <value>Личные лекарства</value>
+  </data>
+  <data name="Item_FirstAidKit" xml:space="preserve">
+    <value>Небольшая аптечка</value>
+  </data>
+  <data name="Item_Painkillers" xml:space="preserve">
+    <value>Обезболивающие</value>
+  </data>
+  <data name="Item_BlisterPlasters" xml:space="preserve">
+    <value>Пластыри от мозолей</value>
+  </data>
+  <data name="Item_MotionSickness" xml:space="preserve">
+    <value>Таблетки от укачивания</value>
+  </data>
+  <data name="Item_StomachRemedy" xml:space="preserve">
+    <value>Средство от расстройства желудка и регидратационные соли</value>
+  </data>
+  <data name="Item_AllergyMedicine" xml:space="preserve">
+    <value>Средство от аллергии</value>
+  </data>
+  <data name="Item_ChildMedicine" xml:space="preserve">
+    <value>Детские лекарства и термометр</value>
+  </data>
+  <data name="Item_PrescriptionCopies" xml:space="preserve">
+    <value>Копии рецептов</value>
+  </data>
+  <data name="Item_DayBackpack" xml:space="preserve">
+    <value>Небольшой рюкзак</value>
+  </data>
+  <data name="Item_WaterBottle" xml:space="preserve">
+    <value>Многоразовая бутылка для воды</value>
+  </data>
+  <data name="Item_Snacks" xml:space="preserve">
+    <value>Перекусы</value>
+  </data>
+  <data name="Item_TravelPillow" xml:space="preserve">
+    <value>Дорожная подушка, беруши и маска для сна</value>
+  </data>
+  <data name="Item_Umbrella" xml:space="preserve">
+    <value>Компактный зонт</value>
+  </data>
+  <data name="Item_BeachTowel" xml:space="preserve">
+    <value>Пляжное полотенце</value>
+  </data>
+  <data name="Item_DryBag" xml:space="preserve">
+    <value>Водонепроницаемый чехол для телефона и ценных вещей</value>
+  </data>
+  <data name="Item_KidsEntertainment" xml:space="preserve">
+    <value>Игры и развлечения для детей</value>
+  </data>
+  <data name="Item_Stroller" xml:space="preserve">
+    <value>Коляска или переноска для ребёнка</value>
+  </data>
+  <data name="Item_WorkDocuments" xml:space="preserve">
+    <value>Рабочие документы</value>
+  </data>
+  <data name="Item_NotebookPen" xml:space="preserve">
+    <value>Блокнот и ручка</value>
+  </data>
+  <data name="Item_BusinessCards" xml:space="preserve">
+    <value>Визитки</value>
+  </data>
+  <data name="Item_LuggageLocks" xml:space="preserve">
+    <value>Замки для багажа</value>
+  </data>
+  <data name="Item_SkiGoggles" xml:space="preserve">
+    <value>Горнолыжная маска</value>
+  </data>
+  <data name="Item_SkiPass" xml:space="preserve">
+    <value>Ски-пасс или подтверждение аренды</value>
+  </data>
+  <data name="Item_TrekkingPoles" xml:space="preserve">
+    <value>Треккинговые палки</value>
+  </data>
+  <data name="Item_OfflineMaps" xml:space="preserve">
+    <value>Офлайн-карты</value>
+  </data>
+  <data name="Item_Headlamp" xml:space="preserve">
+    <value>Налобный фонарь или фонарик</value>
+  </data>
+  <data name="Item_LaundryDetergent" xml:space="preserve">
+    <value>Дорожное средство для стирки</value>
+  </data>
 </root>

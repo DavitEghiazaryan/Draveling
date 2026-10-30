@@ -22,6 +22,8 @@ public static class ValidationMessages
     public static string ActivitiesNegative => Get("Validation_ActivitiesNegative");
     public static string FlightNegative => Get("Validation_FlightNegative");
     public static string OtherNegative => Get("Validation_OtherNegative");
+    public static string PackDaysRequired => Get("Validation_PackDaysRequired");
+    public static string PackDaysRange => Get("Validation_PackDaysRange");
 
     private static string Get(string key) => Resources.GetString(key, CultureInfo.CurrentUICulture) ?? key;
 }

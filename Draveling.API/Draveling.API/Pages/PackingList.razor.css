@@ -1,0 +1,140 @@
+.packing {
+    max-width: 1100px;
+}
+
+.packing-header {
+    margin-bottom: 1.5rem;
+}
+
+    .packing-header h1 {
+        font-weight: 700;
+        color: #0b3d5c;
+    }
+
+    .packing-header .lead {
+        color: #4b5563;
+        max-width: 60ch;
+    }
+
+.pack-card,
+.pack-results {
+    border: 1px solid #e3e8ee;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(11, 61, 92, 0.06);
+}
+
+    .pack-card .card-title {
+        color: #0b3d5c;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+.pack-progress {
+    margin-bottom: 1.25rem;
+}
+
+.pack-progress-label {
+    font-weight: 600;
+    color: #0b3d5c;
+}
+
+.pack-progress-percent {
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+.pack-done {
+    color: #15803d;
+    font-weight: 600;
+}
+
+.pack-group {
+    margin-bottom: 1.25rem;
+}
+
+.pack-group-title {
+    color: #0b3d5c;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.pack-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+}
+
+@media (min-width: 576px) {
+    .pack-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.pack-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.4rem 0.5rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    color: #1f2937;
+}
+
+    .pack-item:hover {
+        background: #eef4fa;
+    }
+
+    .pack-item input {
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    .pack-item.packed .pack-name {
+        text-decoration: line-through;
+        color: #9ca3af;
+    }
+
+.pack-qty {
+    margin-left: auto;
+    font-size: 0.85rem;
+    color: #4b5563;
+    white-space: nowrap;
+}
+
+.pack-note,
+.pack-invalid {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-top: 1rem;
+}
+
+.pack-invalid {
+    color: #b91c1c;
+    font-weight: 600;
+}
+
+@media print {
+    .pack-form-col,
+    .packing-header .lead {
+        display: none;
+    }
+
+    .pack-results-col {
+        width: 100%;
+    }
+
+    .pack-results {
+        border: none;
+        box-shadow: none;
+    }
+
+    .pack-item:hover {
+        background: none;
+    }
+}
